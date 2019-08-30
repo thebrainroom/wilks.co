@@ -1,0 +1,50 @@
+{{ define "main" }}
+  <div class="site-header__content">
+    <p class="site-header__blurb">My name is Tom Wilks</br> I develop modern & robust front-end
+      experiences at <a href="https://thisisbliss.com">Bliss</a> in Manchester.</p>
+  </div>
+  <section>
+    <h1>Sites Launched 🚀</h1>
+    <ol>
+      <li>
+        <a href="https://tuco.ac.uk">https://tuco.ac.uk</a>
+        <em>(Front end & Drupal 8)</em>
+      </li>
+      <li>
+        <a href="https://ipaf.org">https://ipaf.org</a>
+        <em>(Front end & Multilingual Drupal 8)</em>
+      </li>
+      <li>
+        <a href="https://argyllholidays.com">https://argyllholidays.com</a>
+        <em>(Front end & Drupal 8)</em>
+      </li>
+      <li>
+        <a href="https://argyllholidayhomesales.com">https://argyllholidayhomesales.com</a>
+        <em>(Front end & Drupal 8)</em>
+      </li>
+      <li>
+        <a href="http://jlr-triage.com">http://jlr-triage.com</a>
+        <em>(Front end & Multilingual Drupal 7)</em>
+      </li>
+      <li>
+        <a href="https://www.thenewhumanitarian.org/">https://www.thenewhumanitarian.org/</a>
+        <em>(Front end & Multilingual Drupal 7)</em>
+      </li>
+      <li>
+        <a href="https://clarachbay.com">https://clarachbay.com</a>
+        <em>(Front end & Drupal 8)</em>
+      </li>
+    </ol>
+  </section>
+  <section>
+    <h1>Articles ✍🏻</h1>
+    <ol>
+      {{ range first 10 (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
+      <li>
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+        <em>({{ .Date.Format "January 2, 2006" }})</em>
+      </li>
+      {{ end }}
+    </ol>
+  </section>
+{{ end }}
