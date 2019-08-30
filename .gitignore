@@ -1,2 +1,6 @@
 # Hugo default output directory
 /public
+
+# Ignore Sass cache
+.sass-cache*
+node_modules/*
