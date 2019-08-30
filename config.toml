@@ -1,0 +1,15 @@
+baseURL = "https://wilks.co"
+languageCode = "en"
+title = "Website of Tom Wilks"
+theme = "wilks"
+[menu]
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about"
+    weight = -110
+  [[menu.main]]
+		identifier = "articles"
+    name = "Articles"
+    url = "/articles"
+    weight = -100
