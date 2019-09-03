@@ -1,0 +1,46 @@
+// Set the base font-size to allow better rem usability.
+// 1rem = 10px, 1.5rem = 15px, 2rem = 20px etc.
+$font-base: 62.5%;
+
+$font-family-general: "Muli",
+sans-serif;
+
+$font-size-small: 1.2rem;
+$font-size-regular: 1.8rem;
+$font-size-medium: 2rem;
+$font-size-large: 3rem;
+$font-size-large-extra: 6rem;
+
+// Font Weights & Examples
+$font-weight-regular: 400;
+$font-weight-semi-bold: 600;
+$font-weight-bold: 700;
+$font-weight-black: 800;
+
+// Margins & Line Heights
+$margin-general: 2rem;
+$margin-heading: 3rem;
+
+// Colors
+$color-dark: #111;
+$color-light: #FFF;
+$color-light-off: #F9F9F9;
+
+$color-brand-yellow: #F9D423;
+$color-brand-orange: #ff4e50;
+
+$color-border: rgba(0, 0, 0, 0.1);
+
+// Breakpoints
+// We use EM for breakpoints to maintain consistency in all browsers.
+
+// 480px
+$breakpoint-small: "only screen and (max-width: 30em)";
+// 650px
+$breakpoint-small-x: "only screen and (max-width: 40.625em)";
+// 800px
+$breakpoint-medium: "only screen and (max-width: 50em)";
+// 960px
+$breakpoint-medium-x: "only screen and (max-width: 60em)";
+// 1200px
+$breakpoint-large: "only screen and (max-width: 75em)";

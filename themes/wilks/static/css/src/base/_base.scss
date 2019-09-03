@@ -1,0 +1,44 @@
+// sass-lint:disable-block no-vendor-prefixes
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  &:before,
+  &:after {
+    box-sizing: inherit;
+  }
+}
+
+html {
+  font-size: 62.5%;
+  min-height: 100%;
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: $font-family-general;
+  font-size: 1.6rem;
+  color: $color-dark;
+  height: 100%;
+  background-color: $color-brand-yellow;
+  animation: colour-fade 30s ease-in-out infinite;
+  animation-direction: alternate;
+  position: relative;
+}
+
+@keyframes colour-fade {
+  0% {
+    background-color: $color-brand-yellow;
+  }
+
+  50% {
+    background-color: $color-brand-orange;
+  }
+
+  100% {
+    background-color: $color-brand-yellow;
+  }
+}

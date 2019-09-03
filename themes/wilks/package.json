@@ -1,0 +1,32 @@
+{
+  "name": "Wilks",
+  "version": "1.0.0",
+  "description": "Build dependencies for wilks.co",
+  "scripts": {
+    "start": "gulp",
+    "watch": "gulp",
+    "build": "gulp build",
+    "images": "gulp images",
+    "test": "gulp lint"
+  },
+  "author": "Tom Wilks",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://thebrainroom@bitbucket.org/thebrainroom/wilks.co.git"
+  },
+  "homepage": "https://wilks.co",
+  "devDependencies": {
+    "autoprefixer": "^9.6.1",
+    "gulp": "^4.0.2",
+    "gulp-imagemin": "^6.1.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sass-lint": "^1.4.0",
+    "sass-lint": "^1.13.1"
+  },
+  "browserslist": [
+    "last 2 version",
+    "> 1%"
+  ],
+  "dependencies": {}
+}
