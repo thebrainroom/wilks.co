@@ -4,11 +4,6 @@ date: 2013-10-24
 draft: false
 ---
 
----
-layout: post
-title: Hands-On with WebP
----
-
 I've been following the progress of WebP for the last year and thought it was about time I actually investigated it a little further and tried it out for myself. 
 
 Reducing page load speed is something that's incredibly important in a world where millions of devices can access the web with a multitude of conditions, and Google are trying to do something to tackle slow page load speeds. Google describes WebP as: 
