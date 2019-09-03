@@ -3,4 +3,4 @@
 
 # Ignore Sass cache
 .sass-cache*
-node_modules/*
+/themes/wilks/node_modules/*
