@@ -1,7 +1,9 @@
 {{ define "main" }}
   <article>
     <h1>{{ .Title }}</h1>
-    {{ .Content }}
+    <div class="article-content">
+      {{ .Content }}
+    </div>
   </article>
   {{ partial "sidebar.html" . }}
 {{ end }}
