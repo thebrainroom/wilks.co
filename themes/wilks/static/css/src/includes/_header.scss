@@ -3,24 +3,23 @@
   margin-bottom: 10rem;
 }
 
-.site-header__content {
-  position: relative;
-  z-index: 1;
-}
-
-.site-header__blurb {
+.intro {
   font-size: 5rem;
   margin-top: 10rem;
   font-weight: $font-weight-black;
   color: #111;
   margin-bottom: 3rem;
-}
 
-.site-header__blurb a {
-  color: #ff4e50;
-  text-decoration: none;
-  font-weight: $font-weight-black;
-  border-bottom: 0.3rem solid #ff4e50;
+  a {
+    color: #ff4e50;
+    text-decoration: none;
+    font-weight: $font-weight-black;
+    border-bottom: 0.3rem solid #ff4e50;
+  }
+
+  @media #{$breakpoint-medium} {
+    font-size: $font-size-large;
+  }
 }
 
 .site-header__title {

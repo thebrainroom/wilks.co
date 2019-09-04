@@ -4,30 +4,49 @@ h1 {
   margin-bottom: 2rem;
 }
 
+.icon {
+  padding-right: 4rem;
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-size: auto 25px;
+  display: inline-block;
+}
+
+.icon--article {
+  background-image: url("../images/articles.svg");
+}
+
+.icon--work {
+  background-image: url("../images/work.svg");
+}
+
 h2 {
   font-size: 2rem;
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
 
-ol,
-ul {
-  list-style-position: inside;
-  margin-left: 2rem;
-  font-size: $font-size-regular;
+.article-content {
+  ol,
+  ul {
+    list-style-position: inside;
+    margin-left: 2rem;
+    font-size: $font-size-regular;
+  }
+
+  ul ul {
+    margin-top: 1rem;
+  }
+
+  li a {
+    color: #111;
+  }
+
+  li:not(:last-child) {
+    margin-bottom: 1rem;
+  }
 }
 
-ul ul {
-  margin-top: 1rem;
-}
-
-li a {
-  color: #111;
-}
-
-li:not(:last-child) {
-  margin-bottom: 1rem;
-}
 
 a:not([class]) {
   color: $color-dark;

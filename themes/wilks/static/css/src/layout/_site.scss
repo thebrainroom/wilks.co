@@ -5,6 +5,15 @@
   padding: 5rem 10rem;
   margin-right: 5rem;
   position: relative;
+
+  @media #{$breakpoint-medium} {
+    padding: 5rem;
+  }
+
+  @media #{$breakpoint-small-x} {
+    padding: 2rem;
+    margin-right: 2rem;
+  }
 }
 
 article p {
@@ -41,4 +50,5 @@ code {
   line-height: 1.5;
   margin-top: 2rem;
   margin-bottom: 2rem;
+  overflow: scroll;
 }

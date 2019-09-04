@@ -1,0 +1,50 @@
+.post-list {
+  list-style: none;
+}
+
+.post-list__item {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.post-list__item:not(:last-child) {
+  border-bottom: 0.2rem solid $color-border;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.tags__item {
+  margin-right: 1rem;
+  padding: 0.5rem;
+  color: $color-light;
+  background-color: $color-dark;
+  font-size: $font-size-small;
+}
+
+.tags__item--drupal {
+  background-color: #0077C0;
+}
+
+.tags__item--performance {
+  background-color: #2e8b57;
+}
+
+.tags__item--personal {
+  background-color: #7b68ee;
+}
+
+.read-time {
+  color: #d1d1d1;
+  font-size: $font-size-regular;
+}
+
+.date-time {
+  text-transform: uppercase;
+  font-size: $font-size-small;
+  color: $color-dark;
+  font-weight: $font-weight-semi-bold;
+}
