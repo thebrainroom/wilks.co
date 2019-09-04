@@ -36,5 +36,3 @@ As you'd expect a front end developer to be, I'm highly experienced with HTML, v
 ## Personal life
 
 Outside of my work I'm a craft beer loving, record collecting walking stereotype.
-
-![alt text](/images/tom-wilks.jpg "Tom Wilks at a resoivoir")
