@@ -1,14 +1,12 @@
 {{ define "main" }}
-  <div class="site-header__content">
-    <p class="site-header__blurb">My name is Tom Wilks</br> I develop modern & robust front-end
+  <p class="intro">My name is Tom Wilks</br> I develop modern & robust front-end
       experiences at <a href="https://thisisbliss.com">Bliss</a> in Manchester.</p>
-  </div>
   {{ partial "sidebar.html" . }}
   <section>
-    <h1>Articles ✍🏻</h1>
-    <ol>
+    <h1 class="icon icon--article">Articles</h1>
+    <ol class="simple-list">
       {{ range first 10 (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
-      <li>
+      <li class="simple-list__item">
         <a href="{{ .Permalink }}">{{ .Title }}</a>
         <em>({{ .Date.Format "January 2, 2006" }})</em>
       </li>
