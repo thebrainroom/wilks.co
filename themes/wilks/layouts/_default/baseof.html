@@ -1,27 +1,41 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode | default "en" }}">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	{{ if .IsHome }}
-	<title>Tom Wilks - Web Developer from Manchester</title>
-	{{ else }}
-	<title>{{ .Title }} - Tom Wilks - Web Developer from Manchester</title>
-	{{ end }}
-	{{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
-	{{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
-	<link href="https://fonts.googleapis.com/css?family=Muli:400,600,700,800&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="{{ "css/main.css" | relURL }}">
-	{{ with .OutputFormats.Get "RSS" -}}
-		{{ printf `<link rel="%s" type="%s" href="%s" title="%s">` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}
-	{{- end }}
-</head>
-<body>
-	<div class="site-container">
-		{{ partial "header" . }}
-		{{ block "main" . }}{{ end }}
-		{{ partial "footer" . }}
-	</div>
-</body>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		{{ if .IsHome }}
+		<title>Tom Wilks - Web Developer from Manchester</title>
+		{{ else }}
+		<title>{{ .Title }} - Tom Wilks - Web Developer from Manchester</title>
+		{{ end }}
+		{{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
+		{{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
+		<link rel="stylesheet" href="{{ "css/main.css" | relURL }}">
+		{{ with .OutputFormats.Get "RSS" -}}
+			{{ printf `<link rel="%s" type="%s" href="%s" title="%s">` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}
+		{{- end }}
+	</head>
+	<body>
+		<div class="site-container">
+			{{ partial "header" . }}
+			{{ block "main" . }}{{ end }}
+			{{ partial "footer" . }}
+		</div>
+		<script type="text/javascript">
+			WebFontConfig = {
+				google: {
+					families: ['Muli:400,600,700,800']
+				}
+			};
+			(function () {
+				var wf = document.createElement('script');
+				wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+				wf.type = 'text/javascript';
+				wf.async = 'true';
+				var s = document.getElementsByTagName('script')[0];
+				s.parentNode.insertBefore(wf, s);
+			})();
+		</script>
+	</body>
 </html>
