@@ -1,6 +1,9 @@
 <article>
-	{{ .Date.Format "January 2, 2006" }} with a {{ .ReadingTime }} minute reading time.
-	<h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+	<time class="date-time" datetime='{{ .Date.Format "2006-01-02" }}'>{{ .Date.Format "January 2, 2006" }}</time>
+	<h2>
+		<a href="{{ .Permalink }}">{{ .Title }}</a>
+		<span class="read-time">{{ .ReadingTime }} minute read.</span>
+	</h2>
 	<ul class="tags">
 		{{ range .Params.tags }}
 		<li class="tags__item tags__item--{{ . }}">{{ . }}</li>
