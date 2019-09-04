@@ -2,6 +2,7 @@
 title: "Your website is too slow"
 date: 2012-07-26
 draft: false
+tags: [performance]
 ---
 
 <p>Web optimisation is not a new concept, we do it everyday when we compress our images or tidy up some unnecessary code. While these habits are good they don't quite touch the surface of whats possible with good optimization practices. </p>
