@@ -1,13 +1,9 @@
-<section>
-	<h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
-	<time>{{ .Date.Format "02.01.2006 15:04" }}</time>
-	{{ range .Params.tags }}
-	<a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
-	{{ end }}
-	<p>
-		{{ .Summary }}
-		{{ if .Truncated }}
-			<a href="{{ .Permalink }}">Read more...</a>
+<article>
+	{{ .Date.Format "January 2, 2006" }} with a {{ .ReadingTime }} minute reading time.
+	<h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+	<ul class="tags">
+		{{ range .Params.tags }}
+		<li class="tags__item tags__item--{{ . }}">{{ . }}</li>
 		{{ end }}
-	</p>
-</section>
+	</ul>
+</article>
