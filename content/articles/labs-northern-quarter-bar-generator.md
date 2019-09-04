@@ -2,6 +2,7 @@
 title: "Labs: Northern Quarter Bar Generator"
 date: 2012-05-02
 draft: false
+tags: [labs]
 ---
 <p>I'm fairly new to JavaScript so a few months ago I put together a small project that would help me learn how, in particular, arrays work. The result was a random string generator that pulls values from inside an array.</p>
 

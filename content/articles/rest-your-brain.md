@@ -2,6 +2,7 @@
 title: "Rest your brain"
 date: 2012-08-25
 draft: false
+tags: [personal]
 ---
 
 <p>I didn't realise how tired I was until I had a holiday.</p> 
