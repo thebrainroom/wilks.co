@@ -1,10 +1,14 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode | default "en-us" }}">
+<html lang="{{ .Site.LanguageCode | default "en" }}">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>{{ .Title }}</title>
+	{{ if .IsHome }}
+	<title>Tom Wilks - Web Developer from Manchester</title>
+	{{ else }}
+	<title>{{ .Title }} - Tom Wilks - Web Developer from Manchester</title>
+	{{ end }}
 	{{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
 	{{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
 	<link href="https://fonts.googleapis.com/css?family=Muli:400,600,700,800&display=swap" rel="stylesheet">
