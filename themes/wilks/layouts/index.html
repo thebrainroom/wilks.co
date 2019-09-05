@@ -4,11 +4,9 @@
   {{ partial "sidebar.html" . }}
   <section>
     <h1 class="icon icon--article">Articles</h1>
-    <ol class="simple-list">
-      {{ range first 10 (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
-      <li class="simple-list__item">
-        <a href="{{ .Permalink }}">{{ .Title }}</a>
-      </li>
+    <ol class="post-list">
+      {{ range first 4 .Paginator.Pages }}
+      <li class="post-list__item">{{ .Render "summary" }}</li>
       {{ end }}
     </ol>
   </section>
