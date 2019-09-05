@@ -13,6 +13,7 @@ h1 {
   background-position: right center;
   background-repeat: no-repeat;
   background-size: auto 25px;
+  display: inline-block;
 
   @media #{$breakpoint-small-x} {
     background-size: auto 20px;
@@ -84,7 +85,7 @@ em {
 }
 
 
-a:not([class]) {
+a {
   color: $color-dark;
   font-weight: $font-weight-bold;
 

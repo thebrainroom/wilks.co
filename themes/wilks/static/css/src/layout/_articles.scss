@@ -1,28 +1,99 @@
 .post-list {
   list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -1rem;
+
+  @media #{$breakpoint-small-x} {
+    flex-direction: column;
+  }
 }
 
 .post-list__item {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+  flex: 1 0 50%;
+  padding: 1rem;
+
+  @media #{$breakpoint-small-x} {
+    flex: 1 0 100%;
+  }
 }
 
-.post-list__item:not(:last-child) {
-  border-bottom: 0.2rem solid $color-border;
+.teaser {
+  padding: 2.5rem 2rem;
+  background-color: $color-dark;
+  height: 100%;
+  border-top: 0.5rem solid $color-brand-yellow;
+  position: relative;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  color: $color-brand-yellow;
+
+  * {
+    color: $color-light;
+  }
+
+  &:hover,
+  &:focus {
+    .teaser__title {
+      color: inherit;
+    }
+  }
+}
+
+.teaser__title {
+  font-size: 2.2rem;
+  margin-top: 0;
+  margin-bottom: 2rem;
+  transition: color ease-in-out 0.2s;
+}
+
+.teaser__date {
+  font-weight: $font-weight-black;
+  font-size: $font-size-small;
+  color: #d1d1d1;
+}
+
+.read-time {
+  margin-top: auto;
+  color: #d1d1d1;
+  font-size: 1.5rem;
+}
+
+.teaser--drupal {
+  border-color: #0077C0;
+  color: #0077C0;
+}
+
+.teaser--performance {
+  border-color: #2e8b57;
+  color: #2e8b57;
+}
+
+.teaser--personal {
+  border-color: #7b68ee;
+  color: #7b68ee;
 }
 
 .tags {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
+  position: absolute;
+  right: 2rem;
+  top: 0;
 }
 
 .tags__item {
   margin-right: 1rem;
   padding: 0.5rem;
   color: $color-light;
-  background-color: $color-dark;
+  background-color: $color-brand-yellow;
   font-size: $font-size-small;
+  font-weight: $font-weight-bold;
+  line-height: 1;
+  padding-top: 0.5rem;
 }
 
 .tags__item--drupal {
@@ -37,14 +108,17 @@
   background-color: #7b68ee;
 }
 
-.read-time {
-  color: #d1d1d1;
-  font-size: $font-size-regular;
-}
-
 .date-time {
   text-transform: uppercase;
   font-size: $font-size-small;
   color: $color-dark;
   font-weight: $font-weight-semi-bold;
+}
+
+.pager {
+  font-size: $font-size-small;
+  font-weight: $font-weight-black;
+  color: $color-dark;
+  text-align: left;
+  margin-top: 2rem;
 }
