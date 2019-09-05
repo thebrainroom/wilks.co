@@ -3,6 +3,7 @@ title: "Useful Theme Snippets For Drupal 7"
 date: 2014-08-11
 draft: false
 tags: [drupal]
+theme: "drupal"
 ---
 
 At BLISS, our primary development platform is Drupal. 
