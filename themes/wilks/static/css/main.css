@@ -24,10 +24,6 @@ body {
   color: #111;
   height: 100%;
   background-color: #F9D423;
-  -webkit-animation: colour-fade 30s ease-in-out infinite;
-          animation: colour-fade 30s ease-in-out infinite;
-  -webkit-animation-direction: alternate;
-          animation-direction: alternate;
   position: relative;
 }
 
@@ -61,12 +57,24 @@ h1 {
   margin-bottom: 2rem;
 }
 
+@media only screen and (max-width: 40.625em) {
+  h1 {
+    font-size: 2rem;
+  }
+}
+
 .icon {
   padding-right: 4rem;
   background-position: right center;
   background-repeat: no-repeat;
   background-size: auto 25px;
-  display: inline-block;
+}
+
+@media only screen and (max-width: 40.625em) {
+  .icon {
+    background-size: auto 20px;
+    padding-right: 3rem;
+  }
 }
 
 .icon--article {
@@ -81,6 +89,33 @@ h2 {
   font-size: 2rem;
   margin-top: 2rem;
   margin-bottom: 2rem;
+  font-weight: 600;
+}
+
+@media only screen and (max-width: 40.625em) {
+  h2 {
+    font-size: 1.8rem;
+  }
+}
+
+em {
+  font-size: 1.2rem;
+  color: #111;
+  background-color: #DDD;
+}
+
+.article-content p {
+  font-size: 1.8rem;
+  line-height: 1.6;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+@media only screen and (max-width: 40.625em) {
+  .article-content p {
+    font-size: 1.5rem;
+    line-height: 1.5;
+  }
 }
 
 .article-content ol,
@@ -88,10 +123,18 @@ h2 {
   list-style-position: inside;
   margin-left: 2rem;
   font-size: 1.8rem;
+  line-height: 1.5;
+}
+
+@media only screen and (max-width: 40.625em) {
+  .article-content ol,
+  .article-content ul {
+    font-size: 1.5rem;
+  }
 }
 
 .article-content ul ul {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 }
 
 .article-content li a {
@@ -99,7 +142,7 @@ h2 {
 }
 
 .article-content li:not(:last-child) {
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 a:not([class]) {
@@ -107,9 +150,19 @@ a:not([class]) {
   font-weight: 700;
 }
 
+a:not([class]):hover, a:not([class]):focus {
+  text-decoration: none;
+}
+
 .simple-list {
   list-style-position: inside;
   margin-left: 2rem;
+}
+
+@media only screen and (max-width: 40.625em) {
+  .simple-list {
+    margin-left: 0;
+  }
 }
 
 .simple-list__item {
@@ -148,19 +201,16 @@ th {
   margin-bottom: 10rem;
 }
 
-.intro {
-  font-size: 5rem;
-  margin-top: 10rem;
-  font-weight: 800;
-  color: #111;
-  margin-bottom: 3rem;
+@media only screen and (max-width: 40.625em) {
+  .site-header {
+    margin-bottom: 8rem;
+  }
 }
 
-.intro a {
-  color: #ff4e50;
-  text-decoration: none;
+.intro {
+  font-size: 5rem;
   font-weight: 800;
-  border-bottom: 0.3rem solid #ff4e50;
+  color: #111;
 }
 
 @media only screen and (max-width: 50em) {
@@ -169,12 +219,23 @@ th {
   }
 }
 
-.site-header__title {
-  font-size: 6rem;
-  margin-top: 10rem;
-  font-weight: 700;
-  color: #111;
-  margin-bottom: 3rem;
+@media only screen and (max-width: 40.625em) {
+  .intro {
+    font-size: 2.5rem;
+  }
+}
+
+.intro a {
+  color: #ff4e50;
+  text-decoration: none;
+  font-weight: 800;
+  border-bottom: 0.5rem solid #ff4e50;
+  -webkit-transition: border-color ease-in-out 0.2s;
+  transition: border-color ease-in-out 0.2s;
+}
+
+.intro a:hover, .intro a:focus {
+  border-color: #111;
 }
 
 .site-nav {
@@ -188,15 +249,27 @@ th {
 
 .site-nav__link {
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: 800;
   text-decoration: none;
   color: #111;
-  border-bottom: 0.2rem solid #111;
+  border-bottom: 0.2rem solid #DDD;
   padding-bottom: 0.5rem;
+  -webkit-transition: border-color ease-in-out 0.2s;
+  transition: border-color ease-in-out 0.2s;
+}
+
+.site-nav__link:hover, .site-nav__link:focus {
+  border-color: #111;
 }
 
 .site-nav__link:not(:last-child) {
   margin-right: 5rem;
+}
+
+@media only screen and (max-width: 40.625em) {
+  .site-nav__link:not(:last-child) {
+    margin-right: 2.5rem;
+  }
 }
 
 .logo {
@@ -207,11 +280,19 @@ th {
   height: 5rem;
   background-size: 4rem auto;
   display: block;
-  background-color: transparent;
+  background-color: #FFF;
   -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
           box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
   margin-right: auto;
   text-indent: -9999em;
+  -webkit-transition: all ease-in-out 0.2s;
+  transition: all ease-in-out 0.2s;
+}
+
+.logo:hover, .logo:focus {
+  -webkit-box-shadow: 0 0 0 #FFF;
+          box-shadow: 0 0 0 #FFF;
+  background-color: #F9D423;
 }
 
 .site-container {
@@ -232,7 +313,7 @@ th {
 @media only screen and (max-width: 40.625em) {
   .site-container {
     padding: 2rem;
-    margin-right: 2rem;
+    margin-right: 1rem;
   }
 }
 

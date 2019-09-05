@@ -1,6 +1,10 @@
 .simple-list {
   list-style-position: inside;
   margin-left: 2rem;
+
+  @media #{$breakpoint-small-x} {
+    margin-left: 0;
+  }
 }
 
 .simple-list__item {

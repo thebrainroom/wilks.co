@@ -2,6 +2,10 @@ h1 {
   font-weight: 800;
   font-size: 3rem;
   margin-bottom: 2rem;
+
+  @media #{$breakpoint-small-x} {
+    font-size: $font-size-medium;
+  }
 }
 
 .icon {
@@ -9,7 +13,11 @@ h1 {
   background-position: right center;
   background-repeat: no-repeat;
   background-size: auto 25px;
-  display: inline-block;
+
+  @media #{$breakpoint-small-x} {
+    background-size: auto 20px;
+    padding-right: 3rem;
+  }
 }
 
 .icon--article {
@@ -24,18 +32,46 @@ h2 {
   font-size: 2rem;
   margin-top: 2rem;
   margin-bottom: 2rem;
+  font-weight: $font-weight-semi-bold;
+
+  @media #{$breakpoint-small-x} {
+    font-size: $font-size-regular;
+  }
+}
+
+em {
+  font-size: 1.2rem;
+  color: $color-dark;
+  background-color: #DDD;
 }
 
 .article-content {
+  p {
+    font-size: 1.8rem;
+    line-height: 1.6;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+
+    @media #{$breakpoint-small-x} {
+      font-size: 1.5rem;
+      line-height: 1.5;
+    }
+  }
+
   ol,
   ul {
     list-style-position: inside;
     margin-left: 2rem;
     font-size: $font-size-regular;
+    line-height: 1.5;
+
+    @media #{$breakpoint-small-x} {
+      font-size: 1.5rem;
+    }
   }
 
   ul ul {
-    margin-top: 1rem;
+    margin-top: 0.5rem;
   }
 
   li a {
@@ -43,7 +79,7 @@ h2 {
   }
 
   li:not(:last-child) {
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
   }
 }
 
@@ -51,4 +87,9 @@ h2 {
 a:not([class]) {
   color: $color-dark;
   font-weight: $font-weight-bold;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
 }
