@@ -17,16 +17,16 @@
 		{{- end }}
 		<link rel="icon" href="{{ "images/favicon.ico" | relURL }}" type="image/x-icon" />
 	</head>
-	<body>
+	<body class="theme-{{ lower .Page.Type }}{{ if .IsHome }} is-front{{ end }} ">
+		{{ partial "header" . }}
 		<div class="site-container">
-			{{ partial "header" . }}
 			{{ block "main" . }}{{ end }}
 			{{ partial "footer" . }}
 		</div>
 		<script type="text/javascript">
 			WebFontConfig = {
 				google: {
-					families: ['Muli:400,600,700,800']
+					families: ['Quicksand:300,400,500,600,700,800']
 				}
 			};
 			(function () {
@@ -37,6 +37,27 @@
 				var s = document.getElementsByTagName('script')[0];
 				s.parentNode.insertBefore(wf, s);
 			})();
+
+			var menu_link = document.getElementsByClassName('site-nav__link');
+			var body_default = document.body.classList.item(0);
+			for (var i in menu_link) {
+				menu_link[i].addEventListener('mouseenter', function () {
+					var menu_link_text = this.textContent.toLowerCase();
+					var menu_link_class = "theme-"+menu_link_text;
+					console.log(menu_link_class);
+					document.body.classList.remove(body_default);
+					document.body.classList.add(menu_link_class);
+				})
+				menu_link[i].addEventListener('mouseleave', function () {
+					var menu_link_text = this.textContent.toLowerCase();
+					var menu_link_class = "theme-" + menu_link_text;
+					
+					document.body.classList.remove(menu_link_class);
+					document.body.classList.add(body_default);
+				})
+			}
+
+			
 		</script>
 	</body>
 </html>

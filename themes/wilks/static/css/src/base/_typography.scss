@@ -1,38 +1,15 @@
 h1 {
   font-weight: 800;
-  font-size: 3rem;
-  margin-bottom: 2rem;
+  font-size: 5rem;
+  color: $color-dark;
 
   @media #{$breakpoint-small-x} {
     font-size: $font-size-medium;
   }
 }
 
-.icon {
-  padding-right: 4rem;
-  background-position: right center;
-  background-repeat: no-repeat;
-  background-size: auto 25px;
-  display: inline-block;
-
-  @media #{$breakpoint-small-x} {
-    background-size: auto 20px;
-    padding-right: 3rem;
-  }
-}
-
-.icon--article {
-  background-image: url("../images/articles.svg");
-}
-
-.icon--work {
-  background-image: url("../images/work.svg");
-}
-
 h2 {
-  font-size: 2rem;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  font-size: 2.5rem;
   font-weight: $font-weight-semi-bold;
 
   @media #{$breakpoint-small-x} {
@@ -42,21 +19,29 @@ h2 {
 
 em {
   font-size: 1.2rem;
-  color: $color-dark;
-  background-color: #DDD;
 }
 
 .article-content {
+  max-width: 95rem;
+
+  * + * {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+
   p {
-    font-size: 1.8rem;
+    font-size: 2rem;
     line-height: 1.6;
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
 
     @media #{$breakpoint-small-x} {
       font-size: 1.5rem;
       line-height: 1.5;
     }
+  }
+
+  > p:first-of-type {
+    font-size: 2.4rem;
+    font-weight: $font-weight-semi-bold;
   }
 
   ol,
@@ -71,19 +56,10 @@ em {
     }
   }
 
-  ul ul {
-    margin-top: 0.5rem;
-  }
-
   li a {
     color: #111;
   }
-
-  li:not(:last-child) {
-    margin-bottom: 0.5rem;
-  }
 }
-
 
 a {
   color: $color-dark;

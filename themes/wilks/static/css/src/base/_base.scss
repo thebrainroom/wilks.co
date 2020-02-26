@@ -22,21 +22,12 @@ body {
   font-family: $font-family-general;
   font-size: 1.6rem;
   color: $color-dark;
-  height: 100%;
-  background-color: $color-brand-yellow;
   position: relative;
-}
-
-@keyframes colour-fade {
-  0% {
-    background-color: $color-brand-yellow;
-  }
-
-  50% {
-    background-color: $color-brand-orange;
-  }
-
-  100% {
-    background-color: $color-brand-yellow;
-  }
+  background-position: left;
+  background-repeat: repeat;
+  padding: 0;
+  margin: 0;
+  line-height: 1;
+  font-weight: 500;
+  height: 100%;
 }

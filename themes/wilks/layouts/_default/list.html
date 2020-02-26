@@ -1,9 +1,12 @@
 {{ define "main" }}
-	<main>
-		{{ if or .Title .Content }}
-			{{ with .Title }}<h1>{{ . }}</h1>{{ end }}
-			{{ with .Content }}<div>{{ . }}</div>{{ end }}
-		{{ end }}
+	<section>
+
+		<header class="banner">
+			<h1 class="banner__title">{{ .Title }}</h1>
+			{{ if .Params.intro }}
+			<p class="banner__intro">{{ .Params.intro }}</p>
+			{{ end }}
+		</header>
 
 		<ol class="post-list">
 		{{ range .Paginator.Pages }}
@@ -11,5 +14,5 @@
 		{{ end }}
 		</ol>
 		{{ partial "pagination.html" . }}
-	</main>
+	</section>
 {{ end }}

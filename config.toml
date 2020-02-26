@@ -13,7 +13,17 @@ theme = "wilks"
     url = "/about"
     weight = -110
   [[menu.main]]
+		identifier = "work"
+    name = "Work"
+    url = "/work"
+    weight = -100
+  [[menu.main]]
 		identifier = "articles"
     name = "Articles"
     url = "/articles"
-    weight = -100
+    weight = -90
+  [[menu.main]]
+		identifier = "contact"
+    name = "Get in touch"
+    url = "mailto:tom@wilks.co"
+    weight = -80

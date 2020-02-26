@@ -1,27 +1,21 @@
 .site-container {
-  background-color: #f9f9f9;
-  max-width: 120rem;
   min-height: 100%;
-  padding: 5rem 10rem;
-  margin-right: 5rem;
   position: relative;
-
-  @media #{$breakpoint-medium} {
-    padding: 5rem;
-  }
-
-  @media #{$breakpoint-small-x} {
-    padding: 2rem;
-    margin-right: 1rem;
-  }
+  background-color: lighten($color-primary-default, 15%);
+  margin-left: 35rem;
+  padding-top: 5rem;
+  padding-left: 10rem;
+  padding-right: 10rem;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 footer {
-  font-size: 1.2rem;
-  color: #111;
-  padding-top: 5rem;
-  margin-top: 5rem;
-  border-top: 0.2rem solid rgba(0, 0, 0, .05);
+  font-size: 1.4rem;
+  color: $color-light;
+  padding: 5rem 10rem;
+  margin-top: auto;
 }
 
 footer a {
@@ -30,18 +24,21 @@ footer a {
 }
 
 section {
-  padding-top: 5rem;
-  margin-top: 5rem;
-  border-top: 0.2rem solid rgba(0, 0, 0, .05);
+
+  &.latest {
+    padding: 5rem 0 10rem;
+  }
 }
+
 
 code {
   padding: 2rem;
   display: block;
-  background: #eee;
+  background: #0C090D;
   font-size: 1.8rem;
   line-height: 1.5;
   margin-top: 2rem;
   margin-bottom: 2rem;
   overflow: scroll;
+  border: 0.1rem solid rgba($color-light, 0.1);
 }

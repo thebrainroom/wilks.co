@@ -1,84 +1,124 @@
 .site-header {
   width: 100%;
-  margin-bottom: 10rem;
+  max-width: 35rem;
+  padding: 5rem;
+  position: relative;
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: $color-primary-default;
+  background-position: bottom center;
+  background-size: 100%;
+  background-repeat: no-repeat;
 
-  @media #{$breakpoint-small-x} {
-    margin-bottom: 8rem;
+  * {
+    position: relative;
+    z-index: 1;
   }
 }
 
-.intro {
+.banner {
+  margin: -5rem -10rem 0;
+  padding: 5rem 10rem;
+  background-color: $color-secondary-default;
+  position: relative;
+  border-bottom: 1rem solid rgba(0,0,0,0.025);
+  margin-bottom: 5rem;
+  transition: 0.2s ease-in-out background-color;
+  
+
+  * {
+    color: $color-primary-default;
+    position: relative;
+  }
+
+  * + * {
+    margin-top: 5rem;
+  }
+}
+
+.banner__title {
   font-size: 5rem;
-  font-weight: $font-weight-black;
-  color: #111;
+  font-weight: $font-weight-bold;
+}
 
-  @media #{$breakpoint-medium} {
-    font-size: $font-size-large;
+.banner__intro {
+  font-size: 3rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.banner__title,
+.banner__intro {
+  max-width: 95rem;
+}
+
+.banner--front {
+  padding: 5rem 10rem 10rem;
+
+  .banner__title,
+  .banner__intro {
+    max-width: 65rem;
   }
 
-  @media #{$breakpoint-small-x} {
-    font-size: 2.5rem;
-  }
-
-  a {
-    color: $color-brand-orange;
-    text-decoration: none;
-    font-weight: $font-weight-black;
-    border-bottom: 0.5rem solid $color-brand-orange;
-    transition: border-color ease-in-out 0.2s;
-
-    &:hover,
-    &:focus {
-      border-color: $color-dark;
-    }
+  &:before {
+    content: "";
+    background-image: url("../images/wiggles.svg");
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    top: -5rem;
+    bottom: -7.5rem;
+    position: absolute;
+    right: 10rem;
+    opacity: 0.05;
   }
 }
 
 .site-nav {
   display: flex;
-  align-items: flex-end;
+  flex-direction: column;
 }
 
 .site-nav__link {
-  font-size: 1.5rem;
-  font-weight: $font-weight-black;
+  font-size: 2.5rem;
+  font-weight: $font-weight-bold;
   text-decoration: none;
-  color: $color-dark;
-  border-bottom: 0.2rem solid #DDD;
-  padding-bottom: 0.5rem;
+  color: $color-secondary-default;
   transition: border-color ease-in-out 0.2s;
-
-  &:hover,
-  &:focus {
-    border-color: $color-dark;
-  }
-}
-
-.site-nav__link:not(:last-child) {
-  margin-right: 5rem;
-
-  @media #{$breakpoint-small-x} {
-    margin-right: 2.5rem;
-  }
+  padding-bottom: 1rem;
+  transition: 0.2s ease-in-out color;
 }
 
 .logo {
-  background-image: url("../images/logo.svg");
+  background-image: url("../images/logo-round-2.svg");
   background-repeat: no-repeat;
   background-position: center;
-  width: 6rem;
-  height: 5rem;
-  background-size: 4rem auto;
+  width: 4.5rem;
+  height: 3.3rem;
+  background-size: 4.5rem auto;
   display: block;
-  background-color: $color-light;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-  margin-right: auto;
+  //box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  margin-right: 10rem;
   text-indent: -9999em;
   transition: all ease-in-out 0.2s;
+  border-radius: 0.25rem;
 
   &:hover,
   &:focus {
-    box-shadow: 0 0 0 $color-light;
-    background-color: #EEE;
+    box-shadow: 0 0 0 transparent;
   }
+}
+
+.logo-alt {
+  font-size: 5rem;
+  font-weight: bold;
+  margin-bottom: 10rem;
+  text-decoration: none;
+  letter-spacing: -0.1rem;
+  color: $color-secondary-default;
+  transition: 0.2s ease-in-out color;
 }

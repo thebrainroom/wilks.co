@@ -2,7 +2,7 @@
 // 1rem = 10px, 1.5rem = 15px, 2rem = 20px etc.
 $font-base: 62.5%;
 
-$font-family-general: "Muli",
+$font-family-general: "Quicksand",
 sans-serif;
 
 $font-size-small: 1.2rem;
@@ -20,14 +20,20 @@ $font-weight-black: 800;
 // Margins & Line Heights
 $margin-general: 2rem;
 $margin-heading: 3rem;
-
 // Colors
-$color-dark: #111;
+$color-dark: rgba(#1C1C1C, 0.8);
+//$color-light: #FFF1D0;
 $color-light: #FFF;
 $color-light-off: #F9F9F9;
 
-$color-brand-yellow: #F9D423;
-$color-brand-orange: #ff4e50;
+$color-primary-default: #fae079;
+$color-secondary-default: #ef3308;
+
+$color-primary-work: #fae079;
+$color-secondary-work: #151f62;
+
+$color-primary-articles: #fae079;
+$color-secondary-articles: #49356d;
 
 $color-border: rgba(0, 0, 0, 0.1);
 

@@ -1,0 +1,20 @@
+@mixin colour-scheme($color-primary, $color-secondary) {
+  .banner {
+    background-color: $color-secondary;
+  }
+
+  .logo-alt,
+  .site-nav__link,
+  .teaser__title {
+    color: $color-secondary;
+  }
+}
+
+// Create the themes.
+.theme-articles {
+  @include colour-scheme($color-primary-about, $color-secondary-about);
+}
+
+.theme-work {
+  @include colour-scheme($color-primary-work, $color-secondary-work);
+}
