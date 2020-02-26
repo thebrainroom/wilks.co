@@ -8,8 +8,10 @@
 		<time class="date-time" datetime='{{ .Date.Format "2006-01-02" }}'>{{ .Date.Format "January 2, 2006" }}</time>
 	</header>
 
-	<div class="article-content">
-		{{ .Content }}
+	<div class="content">
+		<div class="content__main typography">
+			{{ .Content }}
+		</div>
 	</div>
 </article>
 {{ partial "sidebar.html" . }}

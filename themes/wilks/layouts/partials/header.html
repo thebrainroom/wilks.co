@@ -3,7 +3,7 @@
     <a href="{{ .Site.BaseURL }}" class="logo-alt">Tom </br>Wilks.</a>
     {{ with .Site.Menus.main}}
       {{ range sort . }}
-        <a class="site-nav__link" href="{{ .URL | relURL }}">{{ .Name }}</a>
+        <a class="site-nav__link js-nav-link" href="{{ .URL | relURL }}">{{ .Name }}</a>
       {{ end }}
     {{ end }}
   </nav>

@@ -68,48 +68,57 @@ em {
   font-size: 1.2rem;
 }
 
-.article-content {
-  max-width: 95rem;
-}
-
-.article-content * + * {
+.typography * + * {
   margin-top: 3rem;
   margin-bottom: 3rem;
 }
 
-.article-content p {
+.typography p {
   font-size: 2rem;
   line-height: 1.6;
 }
 
 @media only screen and (max-width: 40.625em) {
-  .article-content p {
+  .typography p {
     font-size: 1.5rem;
     line-height: 1.5;
   }
 }
 
-.article-content > p:first-of-type {
+.typography > p:first-of-type {
   font-size: 2.4rem;
   font-weight: 600;
 }
 
-.article-content ol,
-.article-content ul {
+.typography ol,
+.typography ul {
   list-style-position: inside;
-  margin-left: 2rem;
   font-size: 1.8rem;
   line-height: 1.5;
 }
 
+.typography ol ul,
+.typography ol ol,
+.typography ul ul,
+.typography ul ol {
+  margin-bottom: 1rem;
+  margin-left: 2rem;
+}
+
 @media only screen and (max-width: 40.625em) {
-  .article-content ol,
-  .article-content ul {
+  .typography ol,
+  .typography ul {
     font-size: 1.5rem;
   }
 }
 
-.article-content li a {
+.typography ol li,
+.typography ul li {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.typography li a {
   color: #111;
 }
 
@@ -151,7 +160,7 @@ th {
 
 .site-header {
   width: 100%;
-  max-width: 35rem;
+  max-width: 30rem;
   padding: 5rem;
   position: relative;
   z-index: 1;
@@ -203,7 +212,7 @@ th {
 
 .banner__title,
 .banner__intro {
-  max-width: 95rem;
+  max-width: 90rem;
 }
 
 .banner--front {
@@ -286,7 +295,7 @@ th {
   min-height: 100%;
   position: relative;
   background-color: #fdf1c3;
-  margin-left: 35rem;
+  margin-left: 30rem;
   padding-top: 5rem;
   padding-left: 10rem;
   padding-right: 10rem;
@@ -317,15 +326,58 @@ section.latest {
 }
 
 code {
+  display: inline-block;
+  padding: 0 0.5rem;
+  background-color: #fae079;
+  border-radius: 0.5rem;
+  font-weight: 700;
+}
+
+.highlight pre {
+  border-radius: 0.5rem;
+}
+
+.highlight code {
   padding: 2rem;
   display: block;
   background: #0C090D;
   font-size: 1.8rem;
-  line-height: 1.5;
+  line-height: 1.3;
   margin-top: 2rem;
   margin-bottom: 2rem;
   overflow: scroll;
   border: 0.1rem solid rgba(255, 255, 255, 0.1);
+  font-weight: 500;
+  border-radius: 0.5rem;
+}
+
+.content__main {
+  max-width: 90rem;
+}
+
+.content--with-sidebar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.content--with-sidebar .content__main {
+  max-width: 75rem;
+}
+
+.content__sidebar {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background-color: rgba(28, 28, 28, 0.05);
+  padding: 5rem;
+  margin-left: 10rem;
+  margin-top: -5rem;
+  margin-right: -10rem;
+}
+
+.content__sidebar * {
+  color: rgba(28, 28, 28, 0.8);
 }
 
 .post-list {
@@ -430,26 +482,22 @@ code {
   margin-top: 2rem;
 }
 
-article * {
-  color: rgba(28, 28, 28, 0.8);
-}
-
 .theme-articles .banner {
-  background-color: #151f62;
+  background-color: #49356d;
 }
 
 .theme-articles .logo-alt,
 .theme-articles .site-nav__link,
 .theme-articles .teaser__title {
-  color: #151f62;
+  color: #49356d;
 }
 
 .theme-work .banner {
-  background-color: #49356d;
+  background-color: #151f62;
 }
 
 .theme-work .logo-alt,
 .theme-work .site-nav__link,
 .theme-work .teaser__title {
-  color: #49356d;
+  color: #151f62;
 }

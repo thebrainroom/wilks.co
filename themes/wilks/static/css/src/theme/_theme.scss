@@ -12,7 +12,7 @@
 
 // Create the themes.
 .theme-articles {
-  @include colour-scheme($color-primary-about, $color-secondary-about);
+  @include colour-scheme($color-primary-articles, $color-secondary-articles);
 }
 
 .theme-work {

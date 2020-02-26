@@ -38,12 +38,12 @@
 				s.parentNode.insertBefore(wf, s);
 			})();
 
-			var menu_link = document.getElementsByClassName('site-nav__link');
+			var menu_link = document.getElementsByClassName('js-nav-link');
 			var body_default = document.body.classList.item(0);
 			for (var i in menu_link) {
 				menu_link[i].addEventListener('mouseenter', function () {
 					var menu_link_text = this.textContent.toLowerCase();
-					var menu_link_class = "theme-"+menu_link_text;
+					var menu_link_class = "theme-" + menu_link_text;
 					console.log(menu_link_class);
 					document.body.classList.remove(body_default);
 					document.body.classList.add(menu_link_class);
