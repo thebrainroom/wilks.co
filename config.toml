@@ -22,8 +22,15 @@ theme = "wilks"
     name = "Articles"
     url = "/articles"
     weight = -90
-  [[menu.main]]
-		identifier = "contact"
-    name = "Get in touch"
-    url = "mailto:tom@wilks.co"
-    weight = -80
+pygmentsUseClasses=true
+[markup]
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = true
+    hl_Lines = ""
+    lineNoStart = 1
+    lineNos = false
+    lineNumbersInTable = true
+    noClasses = true
+    style = "monokai"
+    tabWidth = 4
