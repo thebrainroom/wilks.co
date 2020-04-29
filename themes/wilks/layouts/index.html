@@ -2,27 +2,30 @@
 
 {{ if .IsHome }}
 <div class="banner banner--front">
-  <h1 class="banner__title">I am a front end and Drupal developer from Manchester.</h1>
-  <p class="banner__intro">I've been Developing robust &amp; precise experiences for the web since 2005.</p>
+  <h1 class="banner__title">I am a <span>CSS monkey</span> front end developer &amp; <span>gluton for punishment</span> drupal specialist based in sunny Manchester.</h1>
+  <p class="banner__intro">I've been tinkering with all things web since 2005.</p>
   <a class="button" href="/about">About me</a>
 </div>
 {{ end }}
-<section class="latest">
-  <div class="latest__col">
-    <h2 class="latest__heading">Latest Articles <a href="/articles">View all</a></h2>
-    <ol class="post-list">
-      {{ range ( first 3 ( where .Site.RegularPages "Section" "articles" ) ) }}
-      <li class="post-list__item">{{ .Render "summary" }}</li>
-      {{ end }}
-    </ol>
-  </div>
-  <div class="latest__col">
-    <h2 class="latest__heading">Latest Work <a href="/work">View all</a></h2>
-    <ol class="post-list">
-      {{ range ( first 3 ( where .Site.RegularPages "Section" "work" ) ) }}
-      <li class="post-list__item">{{ .Render "summary" }}</li>
-      {{ end }}
-    </ol>
-  </div>
+
+<section class="section section--articles">
+  <h2 class="section__heading">Latest Articles <a href="/articles">View all</a></h2>
+  <ol class="post-list">
+    {{ range ( first 3 ( where .Site.RegularPages "Section" "articles" ) ) }}
+    <li class="post-list__item">{{ .Render "summary" }}</li>
+    {{ end }}
+  </ol>
 </section>
+
+{{ with .Site.GetPage "section" "work" }}
+<section class="section section--work">
+  <h2 class="section__heading">Latest Work <a href="/work">View all</a></h2>
+  <ol class="post-list">
+    {{ range ( first 3 ( where .Site.RegularPages "Section" "work" ) ) }}
+    <li class="post-list__item">{{ .Render "summary" }}</li>
+    {{ end }}
+  </ol>
+</section>
+{{ end }}
+
 {{ end }}

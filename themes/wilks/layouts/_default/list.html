@@ -1,13 +1,9 @@
 {{ define "main" }}
-	<section>
-
-		<header class="banner">
-			<h1 class="banner__title">{{ .Title }}</h1>
-			{{ if .Params.intro }}
-			<p class="banner__intro">{{ .Params.intro }}</p>
-			{{ end }}
-		</header>
-
+	<section class="section section--articles">
+		<h1 class="section__heading">{{ .Title }}</h1>
+		{{ if .Params.intro }}
+		<p class="section__intro">{{ .Params.intro }}</p>
+		{{ end }}
 		<ol class="post-list">
 		{{ range .Paginator.Pages }}
 			<li class="post-list__item">{{ .Render "summary" }}</li>

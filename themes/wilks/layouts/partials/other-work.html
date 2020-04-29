@@ -1,0 +1,8 @@
+<section class="section section--work">
+  <h2 class="section__heading">Other Work <a href="/work">View all</a></h2>
+  <ol class="post-list">
+    {{ range ( first 3 ( where .Site.RegularPages "Section" "work" ) ) }}
+    <li class="post-list__item">{{ .Render "summary" }}</li>
+    {{ end }}
+  </ol>
+</section>

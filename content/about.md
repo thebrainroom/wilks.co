@@ -3,7 +3,7 @@ title: "About"
 draft: false
 slug: about
 type: default
-layout: page-sidebar
+layout: page-single
 intro: Hi there, I'm Tom and I'm a Web Developer from Manchester focusing on front-end and Drupal development. I've been developing websites commercially since 2010 and dabbling in all things web since 2005.
 ---
 I've worked with companies such as Channel 4, BooHoo, Royal Bank of Scotland, Umbro, Schwarzkpf and a large chunk of the UK tourism sector.

@@ -4,6 +4,7 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		
 		{{ if .IsHome }}
 		<title>Tom Wilks - Web Developer from Manchester</title>
 		{{ else }}
@@ -11,6 +12,8 @@
 		{{ end }}
 		{{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
 		{{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
+		<link rel="preconnect" href="//fonts.gstatic.com/" crossorigin>
+		<link rel="preconnect" href="//fonts.googleapis.com" crossorigin>
 		<link rel="stylesheet" href="{{ "css/main.css" | relURL }}">
 		{{ with .OutputFormats.Get "RSS" -}}
 			{{ printf `<link rel="%s" type="%s" href="%s" title="%s">` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}
@@ -19,14 +22,14 @@
 	</head>
 	<body class="theme-{{ lower .Page.Type }}{{ if .IsHome }} is-front{{ end }} ">
 		{{ partial "header" . }}
-		<div class="site-container">
+		<main>
 			{{ block "main" . }}{{ end }}
-			{{ partial "footer" . }}
-		</div>
+		</main>
+		{{ partial "footer" . }}
 		<script type="text/javascript">
 			WebFontConfig = {
 				google: {
-					families: ['Quicksand:300,400,500,600,700,800']
+					families: ['Quicksand:300,400,500,600,700,800&display=swap']
 				}
 			};
 			(function () {
@@ -37,27 +40,6 @@
 				var s = document.getElementsByTagName('script')[0];
 				s.parentNode.insertBefore(wf, s);
 			})();
-
-			var menu_link = document.getElementsByClassName('js-nav-link');
-			var body_default = document.body.classList.item(0);
-			for (var i in menu_link) {
-				menu_link[i].addEventListener('mouseenter', function () {
-					var menu_link_text = this.textContent.toLowerCase();
-					var menu_link_class = "theme-" + menu_link_text;
-					console.log(menu_link_class);
-					document.body.classList.remove(body_default);
-					document.body.classList.add(menu_link_class);
-				})
-				menu_link[i].addEventListener('mouseleave', function () {
-					var menu_link_text = this.textContent.toLowerCase();
-					var menu_link_class = "theme-" + menu_link_text;
-					
-					document.body.classList.remove(menu_link_class);
-					document.body.classList.add(body_default);
-				})
-			}
-
-			
 		</script>
 	</body>
 </html>

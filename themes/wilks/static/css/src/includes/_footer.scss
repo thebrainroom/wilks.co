@@ -1,0 +1,11 @@
+.footer {
+  font-size: 1.4rem;
+  background-color: #373e4c;
+  padding: 2rem var(--frame);
+  color: $color-light;
+}
+
+.footer a {
+  color: inherit;
+  text-decoration: none;
+}

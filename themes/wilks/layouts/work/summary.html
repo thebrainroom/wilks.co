@@ -1,3 +1,8 @@
-<a href="{{ .Permalink }}" title="Read {{ .Title }}" class="teaser">
-  <h2 class="teaser__title">{{ .Title }}</h2>
+<a href="{{ .Params.website }}" title="Visit {{ .Title }}" class="teaser" target="_blank" rel="noopener noreferrer">
+  <div class="teaser__content">
+    <h2 class="teaser__title">{{ .Title }}</h2>
+    {{ if .Params.intro }}
+    <p class="teaser__footer">{{ .Params.intro }}</p>
+    {{ end }}
+  </div>
 </a>

@@ -7,13 +7,11 @@
       {{ end }}
     </header>
   
-    <div class="content content--with-sidebar">
+    <div class="content">
       <div class="content__main typography">
         {{ .Content }}
       </div>
-      <aside class="content__sidebar">
-        {{ partial "about-sidebar.html" . }}
-      </aside>
     </div>
+    {{ partial "about-sidebar.html" . }}
   </article>
 {{ end }}

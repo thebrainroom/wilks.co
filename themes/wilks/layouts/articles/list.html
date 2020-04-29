@@ -1,0 +1,14 @@
+{{ define "main" }}
+<section class="section section--articles">
+  <h1 class="section__heading">All {{ .Title }}</h1>
+  {{ if .Params.intro }}
+  <p class="section__intro">{{ .Params.intro }}</p>
+  {{ end }}
+  <ol class="post-list">
+    {{ range .Paginator.Pages }}
+    <li class="post-list__item">{{ .Render "summary" }}</li>
+    {{ end }}
+  </ol>
+  <!-- {{ partial "pagination.html" . }} -->
+</section>
+{{ end }}

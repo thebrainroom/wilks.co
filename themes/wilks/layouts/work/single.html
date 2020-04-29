@@ -5,11 +5,6 @@
     {{ if .Params.intro }}
     <p class="banner__intro">{{ .Params.intro }}</p>
     {{ end }}
-    <div class="banner__date">
-      <span>{{ .Date.Format "Jan" }}</span>
-      <span>{{ .Date.Format "02" }}</span>
-      <span>{{ .Date.Format "2006" }}</span>
-    </div>
   </header>
 
   <div class="content">
@@ -18,5 +13,5 @@
     </div>
   </div>
 </article>
-{{ partial "other-articles.html" . }}
+{{ partial "other-work.html" . }}
 {{ end }}

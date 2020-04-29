@@ -5,12 +5,12 @@
 		{{ if .Params.intro }}
 		<p class="banner__intro">{{ .Params.intro }}</p>
 		{{ end }}
-		<time class="date-time" datetime='{{ .Date.Format "2006-01-02" }}'>{{ .Date.Format "January 2, 2006" }}</time>
 	</header>
 
 	<div class="content">
 		<div class="content__main typography">
 			{{ .Content }}
+			<time class="date-time" datetime='{{ .Date.Format "2006-01-02" }}'>{{ .Date.Format "January 2, 2006" }}</time>
 		</div>
 	</div>
 </article>

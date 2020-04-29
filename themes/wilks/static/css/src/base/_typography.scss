@@ -1,11 +1,6 @@
 h1 {
   font-weight: 800;
   font-size: 5rem;
-  color: $color-dark;
-
-  @media #{$breakpoint-small-x} {
-    font-size: $font-size-medium;
-  }
 }
 
 h2 {
@@ -39,7 +34,6 @@ em {
   }
 
   > p:first-of-type {
-    font-size: 2.4rem;
     font-weight: $font-weight-semi-bold;
   }
 
@@ -71,7 +65,7 @@ em {
 }
 
 a {
-  color: $color-dark;
+  color: var(--color-text);
   font-weight: $font-weight-bold;
 
   &:hover,
