@@ -1,6 +1,5 @@
 .site-header {
   padding: var(--frame);
-  position: relative;
   z-index: 1;
   position: fixed;
   top: 0;
@@ -11,11 +10,14 @@
   background-repeat: no-repeat;
   box-shadow: $box-shadow;
   border-bottom-right-radius: 0.5rem;
+  // transition: ease-in-out all 0.5s;
+  // opacity: 0;
+  // transform: translateX(-100%);
 
-  * {
-    position: relative;
-    z-index: 1;
-  }
+  // .wf-active & {
+  //   opacity: 1;
+  //   transform: translateX(0);
+  // }
 }
 
 .banner {
@@ -27,7 +29,7 @@
   border-radius: 0.5rem;
 
   @media #{$breakpoint-small-x} {
-    padding: 5rem 3rem 5rem var(--gutter-left);
+    padding: var(--gutter-left) 2rem 3rem 2rem;
   }
 
   .theme-articles & {
@@ -78,34 +80,11 @@
   max-width: 90rem;
 }
 
-.banner__date {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  padding: 0 2rem;
-  background-color: rgba(0,0,0,.1);
-  font-size: 2.5rem;
-  font-weight: bold;
-  margin-top: 0;
-  line-height: 1.2;
-  border-top-right-radius: 0.5rem;
-  border-bottom-right-radius: 0.5rem;
-  display: none;
-
-  * {
-    margin-top: 0;
-  }
-}
-
 .banner--front {
   @media #{$breakpoint-small-x} {
-    padding: 5rem 3rem 5rem var(--gutter-left);
+    padding: var(--gutter-left) 2rem 3rem 2rem;
   }
+
   .banner__title,
   .banner__intro {
     max-width: 80rem;
@@ -115,6 +94,11 @@
 .site-nav {
   display: flex;
   flex-direction: column;
+
+  @media #{$breakpoint-small-x} {
+    flex-direction: row;
+    align-items: flex-end;
+  }
 }
 
 .site-nav__link {
@@ -122,14 +106,13 @@
   font-weight: $font-weight-bold;
   text-decoration: none;
   color: $color-primary-default;
-  transition: border-color ease-in-out 0.2s;
   padding-bottom: 1rem;
-  transition: 0.2s ease-in-out color;
   text-transform: lowercase;
 
   @media #{$breakpoint-small-x} {
     font-size: 1.8rem;
-    padding-bottom: 0;
+    padding-bottom: 0.1rem;
+    margin-left: 1rem;
   }
 }
 
@@ -144,6 +127,6 @@
   text-transform: lowercase;
 
   @media #{$breakpoint-small-x} {
-    margin-bottom: 5rem;
+    margin-bottom: 0;
   }
 }
