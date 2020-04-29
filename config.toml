@@ -13,7 +13,24 @@ theme = "wilks"
     url = "/about"
     weight = -110
   [[menu.main]]
+		identifier = "work"
+    name = "Work"
+    url = "/work"
+    weight = -100
+  [[menu.main]]
 		identifier = "articles"
     name = "Articles"
     url = "/articles"
-    weight = -100
+    weight = -90
+pygmentsUseClasses=true
+[markup]
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = true
+    hl_Lines = ""
+    lineNoStart = 1
+    lineNos = false
+    lineNumbersInTable = true
+    noClasses = true
+    style = "monokai"
+    tabWidth = 4

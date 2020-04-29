@@ -1,0 +1,8 @@
+<a href="{{ .Permalink }}" title="Read {{ .Title }}" class="teaser teaser--{{ .Params.theme }}">
+  <div class="teaser__content">
+  <h2 class="teaser__title">{{ .Title }}</h2>
+  <div class="teaser__footer">Published <time class="teaser__date"
+      datetime='{{ .Date.Format "2006-01-02" }}'>{{ .Date.Format "January 2, 2006" }}</time>, is a {{ .ReadingTime }}
+    minute read.</div>
+  </div>
+</a>

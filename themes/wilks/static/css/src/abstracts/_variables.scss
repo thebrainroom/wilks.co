@@ -2,7 +2,7 @@
 // 1rem = 10px, 1.5rem = 15px, 2rem = 20px etc.
 $font-base: 62.5%;
 
-$font-family-general: "Muli",
+$font-family-general: "Quicksand",
 sans-serif;
 
 $font-size-small: 1.2rem;
@@ -20,16 +20,24 @@ $font-weight-black: 800;
 // Margins & Line Heights
 $margin-general: 2rem;
 $margin-heading: 3rem;
-
 // Colors
-$color-dark: #111;
+$color-dark: rgba(#1C1C1C, 0.8);
+//$color-light: #FFF1D0;
 $color-light: #FFF;
 $color-light-off: #F9F9F9;
 
-$color-brand-yellow: #F9D423;
-$color-brand-orange: #ff4e50;
+$color-primary-default: #d8033f;
+$color-secondary-default: #ffeb6b;
+
+$color-primary-work: #fae079;
+$color-secondary-work: #151f62;
+
+$color-primary-articles: #fae079;
+$color-secondary-articles: #49356d;
 
 $color-border: rgba(0, 0, 0, 0.1);
+
+$box-shadow: 0 1px 2px rgba(0,0,0,0.02), 0 2px 4px rgba(0,0,0,0.02), 0 4px 8px rgba(0,0,0,0.02), 0 8px 16px rgba(0,0,0,0.02), 0 16px 32px rgba(0,0,0,0.02), 0 32px 64px rgba(0,0,0,0.02);
 
 // Breakpoints
 // We use EM for breakpoints to maintain consistency in all browsers.

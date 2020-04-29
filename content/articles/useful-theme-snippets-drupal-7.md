@@ -16,9 +16,9 @@ I'm not going to go into the tools today as they're still being tested internall
 
 Drupal ships with a set of pre-made stylesheets that help with the theming of forms and other generic system elements. If you're creating a theme from scratch these can be annoying to override and generally overspecific.
 
-These files can be removed in your <code>template.php</code> like so:
+These files can be removed in your `template.php` like so:
 
-```php
+``` php
 // Turn off styles from system/contrib modules
 
 function THEMENAME_css_alter(&$css) {
@@ -30,7 +30,7 @@ function THEMENAME_css_alter(&$css) {
 
 ## Create a template for teaser views
 
-When theming different node view types such as full content or teaser, we ideally want to seperate the logic from the templates where possible. Rather than checking for the <code>$teaser</code> variable in a standard node template (for example, node--article.tpl.php) we can create a new theme suggestion like so in the <code>template.php</code> file:
+When theming different node view types such as full content or teaser, we ideally want to seperate the logic from the templates where possible. Rather than checking for the `$teaser` variable in a standard node template (for example, node--article.tpl.php) we can create a new theme suggestion like so in the `template.php` file:
 
 ```php
 function THEMENAME_preprocess_node(&$vars) {
@@ -49,7 +49,7 @@ So now based on our example of the article content type we have the option to th
 
 ## Creating and templating custom display modes
 
-It's possible when theming more complex sites that you'll require more display modes than just teaser and full content. This particular piece of code will live in it's own custom module. Drupal.org has a detailed tutorial for <a href="https://www.drupal.org/node/1074360" target="_blank">creating your own module</a>.
+It's possible when theming more complex sites that you'll require more display modes than just teaser and full content. This particular piece of code will live in it's own custom module. Drupal.org has a detailed tutorial for [creating your own module](https://www.drupal.org/node/1074360)</a>.
 
 Now presuming you have the backbone of your module setup. Add the following code to your custom module:
 
@@ -66,13 +66,13 @@ function YOURMODULENAME_entity_info_alter(&$entity_info) {
 
 Now we've got the code in place for the custom display clear the cache and you should now have access to the custom display accross all your content types and within views.
 
-For this to become useful we need to add a template suggestion to allow us to theme it. This will exist within <code>preprocess_node()</code> like the earlier example.
+For this to become useful we need to add a template suggestion to allow us to theme it. This will exist within `preprocess_node()` like the earlier example.
 
 ```php
 if($vars['view_mode'] == 'custom_display') {
-    $vars['theme_hook_suggestions'][] = 'node__' . $vars['type'] . '__custom-display';
-    // Creates theme suggestion for node--contenttype--custom-display.tpl.php
-  }
+  $vars['theme_hook_suggestions'][] = 'node__' . $vars['type'] . '__custom-display';
+  // Creates theme suggestion for node--contenttype--custom-display.tpl.php
+}
 ```
 
 
@@ -104,7 +104,7 @@ These includes can then be called in any other Drupal template like so:
 <?php print theme('header'); ?>
 ```
 
-Theme functions also allow you to pass arguments to them. This might be useful when you a rendering a Drupal menu inside a theme template. In its current form the variable <code>$page</code> (which is needed to render the menu) does not exist. You can pass in the variable like this:
+Theme functions also allow you to pass arguments to them. This might be useful when you a rendering a Drupal menu inside a theme template. In its current form the variable `$page` (which is needed to render the menu) does not exist. You can pass in the variable like this:
 
 ```php
 <?php print theme('header', array(

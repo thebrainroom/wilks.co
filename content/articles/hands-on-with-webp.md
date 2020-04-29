@@ -60,9 +60,9 @@ Now we have the output of the original PNG in WebP at 100% quality and using a l
 
 Flags used:
 
-{% highlight bash %}
+``` bash
 ./cwebp transparent-example.png -q 100 -lossless -o transparent-example-80.webp
-{% endhighlight %}
+```
 
 <img src="/images/articles/hands-on-webp/transparent-example-80.webp" alt="WebP Image" />
 
@@ -75,9 +75,9 @@ Finally, this is the output of the original PNG in WebP at 80% quality and using
 
 Flags used:
 
-{% highlight bash %}
+``` bash
 ./cwebp transparent-example.png -q 80 -o transparent-example-80.webp
-{% endhighlight %}
+```
 
 What we have here is pretty impressive. We've managed to shrink the filesize with no quality loss by over **54%**. Plus, if we look at the lossy compression we've saved over **90%** on the original file size with negligible quality loss.
 

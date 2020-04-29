@@ -1,9 +1,9 @@
-<header class="site-header">
+<header class="site-header {{ if .IsHome }}site-header--home{{ end }}">
   <nav class="site-nav">
-    <a href="{{ .Site.BaseURL }}" class="logo">{{ .Site.Title }}</a>
+    <a href="{{ .Site.BaseURL }}" class="logo">Tom </br>Wilks.</a>
     {{ with .Site.Menus.main}}
       {{ range sort . }}
-        <a class="site-nav__link" href="{{ .URL | relURL }}">{{ .Name }}</a>
+        <a class="site-nav__link js-nav-link" href="{{ .URL | relURL }}">{{ .Name }}</a>
       {{ end }}
     {{ end }}
   </nav>

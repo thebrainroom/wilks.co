@@ -1,9 +1,16 @@
 {{ define "main" }}
   <article>
-    <h1>{{ .Title }}</h1>
-    <div class="article-content">
-      {{ .Content }}
+    <header class="banner">
+      <h1 class="banner__title">{{ .Title }}</h1>
+      {{ if .Params.intro }}
+        <p class="banner__intro">{{ .Params.intro }}</p>
+      {{ end }}
+    </header>
+  
+    <div class="content">
+      <div class="content__main typography">
+        {{ .Content }}
+      </div>
     </div>
   </article>
-  {{ partial "sidebar.html" . }}
 {{ end }}

@@ -1,4 +1,41 @@
 // sass-lint:disable-block no-vendor-prefixes
+:root {
+  --font-family: "Quicksand", sans-serif;
+  --font-size-largest: 6rem;
+  --font-size-logo: 6rem;
+  --font-size-section: 4rem;
+  --font-size-intro: 3.5rem;
+  --color-text: #1C1C1C;
+  --color-contrast-primary: #000;
+  --color-contrast-secondary: #FFF;
+  --color-primary: #d8033f;
+  --theme-default: #ffeb6b;
+  --theme-article: #cbfabe;
+  --theme-work: #be9bdf7a;
+  --gutter-left: 35rem;
+  --frame: 7.5rem;
+  --section-gap: 7.5rem;
+
+  @media #{$breakpoint-large} {
+    --gutter-left: 20rem;
+    --frame: 5rem;
+    --section-gap: 5rem;
+    --font-size-largest: 4rem;
+    --font-size-logo: 4rem;
+    --font-size-intro: 3.2rem;
+  }
+
+  @media #{$breakpoint-small-x} {
+    --gutter-left: 11rem;
+    --frame: 2rem;
+    --section-gap: 2rem;
+    --font-size-largest: 2rem;
+    --font-size-logo: 3rem;
+    --font-size-intro: 1.8rem;
+    --font-size-section: 2rem;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -19,24 +56,16 @@ html {
 }
 
 body {
-  font-family: $font-family-general;
+  font-family: var(--font-family);
+  font-display: swap;
   font-size: 1.6rem;
-  color: $color-dark;
-  height: 100%;
-  background-color: $color-brand-yellow;
+  color: var(--color-text);
   position: relative;
-}
-
-@keyframes colour-fade {
-  0% {
-    background-color: $color-brand-yellow;
-  }
-
-  50% {
-    background-color: $color-brand-orange;
-  }
-
-  100% {
-    background-color: $color-brand-yellow;
-  }
+  background-position: left;
+  background-repeat: repeat;
+  padding: 0;
+  margin: 0;
+  line-height: 1;
+  font-weight: 500;
+  height: 100%;
 }
