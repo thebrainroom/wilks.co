@@ -1,14 +1,14 @@
 {{ define "main" }}
 
 {{ if .IsHome }}
-<div class="banner banner--front">
+<div class="banner banner--front animate">
   <h1 class="banner__title">I am a <span>CSS monkey</span> front end developer &amp; <span>gluton for punishment</span> drupal specialist based in sunny Manchester.</h1>
   <p class="banner__intro">I've been tinkering with all things web since 2005.</p>
   <a class="button" href="/about">About me</a>
 </div>
 {{ end }}
 
-<section class="section section--articles">
+<section class="section section--articles section--latest animate">
   <h2 class="section__heading">Latest Articles <a href="/articles">View all</a></h2>
   <ol class="post-list">
     {{ range ( first 3 ( where .Site.RegularPages "Section" "articles" ) ) }}
@@ -18,7 +18,7 @@
 </section>
 
 {{ with .Site.GetPage "section" "work" }}
-<section class="section section--work">
+<section class="section section--work section--latest animate">
   <h2 class="section__heading">Latest Work <a href="/work">View all</a></h2>
   <ol class="post-list">
     {{ range ( first 3 ( where .Site.RegularPages "Section" "work" ) ) }}

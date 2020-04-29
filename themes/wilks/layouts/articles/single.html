@@ -1,15 +1,10 @@
 {{ define "main" }}
-<article>
+<article class="animate fadein">
   <header class="banner">
     <h1 class="banner__title">{{ .Title }}</h1>
     {{ if .Params.intro }}
     <p class="banner__intro">{{ .Params.intro }}</p>
     {{ end }}
-    <div class="banner__date">
-      <span>{{ .Date.Format "Jan" }}</span>
-      <span>{{ .Date.Format "02" }}</span>
-      <span>{{ .Date.Format "2006" }}</span>
-    </div>
   </header>
 
   <div class="content">
