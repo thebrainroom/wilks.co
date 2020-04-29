@@ -5,13 +5,16 @@ const gulp = require('gulp')
 const sass = require('gulp-sass')
 const autoprefixer = require('autoprefixer')
 const sassLint = require('gulp-sass-lint')
+const babel = require('gulp-babel')
+const sourcemaps = require('gulp-sourcemaps')
+const standard = require('gulp-semistandard')
 const imagemin = require('gulp-imagemin');
 
 const styleInput = './static/css/src/**/*.scss'
 const styleOutput = './static/css/'
 
-const scriptInput = './static/js/src/**/*.js'
-const scriptOutput = './static/js/'
+const scriptInput = './static/scripts/src/**/*.js'
+const scriptOutput = './static/scripts/'
 
 const imageInput = './static/images/src/*'
 const imageOutput = './static/images/'
@@ -21,41 +24,82 @@ const sassOptions = {
   outputStyle: 'expanded'
 }
 
-gulp.task('lint-styles', () => {
+// Lint source styles through sass-lint
+function lintStyles() {
   return gulp
     .src(styleInput)
     .pipe(sassLint())
     .pipe(sassLint.format())
-    .pipe(sassLint.failOnError())
-});
+    .pipe(sassLint.failOnError()
+  );
+}
 
-
-gulp.task('styles', gulp.series('lint-styles', () => {
+// Compile styles with autoprefixer
+function styles() {
   const processors = [
     autoprefixer()
   ]
-
   return gulp
     .src(styleInput)
-    .pipe(sassLint())
-    .pipe(sassLint.format())
-    .pipe(sassLint.failOnError())
     .pipe(sass(sassOptions).on('error', sass.logError))
     .pipe(postcss(processors))
-    .pipe(gulp.dest(styleOutput))
-}));
+    .pipe(gulp.dest(styleOutput)
+  );
+}
 
-gulp.task('images', (done) => {
-  return gulp.src(imageInput)
-    .pipe(imagemin())
-    .pipe(gulp.dest(imageOutput))
-});
-
-gulp.task('watch:styles', gulp.series('styles', () => {
+// Lint source scripts with standard
+function lintScripts() {
   return gulp
-    .watch(styleInput, gulp.series('styles'));
-}));
+    .src(scriptInput)
+    .pipe(standard())
+    .pipe(standard.reporter('default', {
+      showFilePath: true,
+      quiet: true
+    })
+  );
+}
 
-gulp.task('watch', gulp.parallel('watch:styles', 'images'));
+// Compile scripts with babel for backwards compatibility
+function scripts() {
+  return gulp
+    .src(scriptInput)
+    .pipe(sourcemaps.init())
+    .pipe(babel({
+      presets: ['env']
+    }))
+    .pipe(sourcemaps.write('.'))
+    .pipe(gulp.dest(scriptOutput)
+  );
+}
 
-gulp.task('default', gulp.series('watch'));
+// Compress all images using imagemin
+function images() {
+  return gulp
+    .src(imageInput)
+    .pipe(imagemin())
+    .pipe(gulp.dest(imageOutput)
+  );
+}
+
+function watchAssets() {
+  // Watch styles
+  gulp.watch(styleInput, gulp.series(lintStyles, styles));
+  // Watch images
+  gulp.watch(imageInput, gulp.series(images));
+}
+
+// Lint and compile scripts only
+const js = gulp.series(lintScripts, scripts);
+// Lint and compile styles only
+const css = gulp.series(lintStyles, styles);
+// Lint styles and scripts then compile styles, scripts and images
+const build = gulp.series(lintStyles, gulp.parallel(styles, images));
+// As above but then watch for changes in styles, scripts and images
+const watch = gulp.series(build, gulp.parallel(watchAssets));
+
+// Export private tasks to public gulp functions e.g. `gulp watch`
+exports.js = js;
+exports.css = css;
+exports.build = build;
+exports.watch = watch;
+exports.default = watch;

@@ -1,32 +1,60 @@
 {
-  "name": "Wilks",
+  "name": "bliss-go",
   "version": "1.0.0",
-  "description": "Build dependencies for wilks.co",
+  "description": "A bare starting point for Drupal 8.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thisisbliss/bliss-go.git"
+  },
   "scripts": {
     "start": "gulp",
-    "watch": "gulp",
+    "watch": "gulp watch",
     "build": "gulp build",
-    "images": "gulp images",
-    "test": "gulp lint"
+    "css": "gulp css",
+    "js": "gulp js"
   },
   "author": "Tom Wilks",
   "license": "ISC",
   "bugs": {
-    "url": "https://thebrainroom@bitbucket.org/thebrainroom/wilks.co.git"
+    "url": "https://github.com/thisisbliss/bliss-go/issues"
   },
-  "homepage": "https://wilks.co",
+  "homepage": "https://github.com/thisisbliss/bliss-go",
   "devDependencies": {
-    "autoprefixer": "^9.6.1",
+    "@babel/core": "^7.7.5",
+    "@babel/preset-env": "^7.7.6",
+    "autoprefixer": "^9.7.6",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.6",
+    "babel-preset-env": "^1.7.0",
     "gulp": "^4.0.2",
-    "gulp-imagemin": "^6.1.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-eslint": "^6.0.0",
+    "gulp-imagemin": "^7.1.0",
     "gulp-postcss": "^8.0.0",
-    "gulp-sass": "^4.0.2",
+    "gulp-sass": "^4.1.0",
     "gulp-sass-lint": "^1.4.0",
+    "gulp-semistandard": "^1.0.0",
+    "gulp-sourcemaps": "^2.6.5",
     "sass-lint": "^1.13.1"
   },
   "browserslist": [
     "last 2 version",
     "> 1%"
   ],
+  "semistandard": {
+    "globals": [
+      "Drupal",
+      "drupalSettings",
+      "drupalTranslations",
+      "domready",
+      "jQuery",
+      "$",
+      "_",
+      "matchMedia",
+      "Backbone",
+      "Modernizr",
+      "CKEDITOR"
+    ]
+  },
   "dependencies": {}
 }
