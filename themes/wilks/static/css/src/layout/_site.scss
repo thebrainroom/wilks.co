@@ -29,36 +29,22 @@ code {
     border: 0.1rem solid rgba($color-light, 0.1);
     font-weight: 500;
     border-radius: 0.5rem;
+
+    @media #{$breakpoint-small-x} {
+      font-size: 1.5rem;
+    }
   }
 }
 
 .content {
   padding-left: var(--gutter-left);
   padding-bottom: var(--section-gap);
+
+  @media #{$breakpoint-small-x} {
+    padding-left: 0;
+  }
 }
 
 .content__main {
   max-width: 80rem;
-}
-
-.content--with-sidebar {
-  display: flex;
-
-  .content__main {
-    max-width: 75rem;
-  }
-}
-
-.content__sidebar {
-  flex: 1;
-  background-color: rgba(#1c1c1c, 0.05);
-  background-color: $color-light;
-  border-radius: 0.5rem;
-  padding: 5rem;
-  box-shadow: $box-shadow;
-  max-width: 80rem;
-
-  * {
-    color: var(--color-text);
-  }
 }

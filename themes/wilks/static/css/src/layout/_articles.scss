@@ -20,8 +20,11 @@
     width: 50%;
   }
 
-  @media #{$breakpoint-small-x} {
+  @media #{$breakpoint-medium-x} {
     width: 100%;
+  }
+
+  @media #{$breakpoint-small-x} {
     padding: 1rem;
   }
 }
@@ -32,7 +35,13 @@
   border-radius: 0.5rem;
 
   @media #{$breakpoint-small-x} {
-    padding: 5rem 3rem 5rem var(--gutter-left);
+    padding: var(--gutter-left) 2rem 3rem 2rem;
+  }
+}
+
+.section--latest {
+  @media #{$breakpoint-small-x} {
+    padding: 3rem 2rem 3rem 2rem;
   }
 }
 
@@ -53,6 +62,10 @@
   margin-bottom: 3rem;
   font-size: var(--font-size-section);
   font-weight: bold;
+
+  @media #{$breakpoint-small-x} {
+    margin-bottom: 1rem;
+  }
 
   a {
     border-radius: 0.5rem;
@@ -122,76 +135,10 @@
   }
 }
 
-// .teaser__date {
-//   font-weight: $font-weight-black;
-//   font-size: $font-size-small;
-//   color: #bbb;
-// }
-
 .teaser__footer {
   margin-top: auto;
   font-size: 1.5rem;
   line-height: 1.4;
   font-weight: $font-weight-semi-bold;
   color: var(--color-text);
-}
-
-// .teaser--drupal {
-//   background-color: #0077C0;
-//   //color: #0077C0;
-// }
-
-// .teaser--performance {
-//   background-color: #2e8b57;
-// }
-
-// .teaser--personal {
-//   background-color: #EF8354;
-// }
-
-.tags {
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-
-.tags__item {
-  margin-left: 1rem;
-  padding: 0.8rem 1rem 0.8rem;
-  color: var(--color-text);
-  background-color: $color-light;
-  font-size: $font-size-small;
-  font-weight: $font-weight-bold;
-  line-height: 1;
-  border-top-right-radius: 1rem;
-  border-bottom-left-radius: 1rem;
-}
-
-// .tags__item--drupal {
-//   background-color: #0077C0;
-// }
-
-// .tags__item--performance {
-//   background-color: #2e8b57;
-// }
-
-// .tags__item--personal {
-//   background-color: #7b68ee;
-// }
-
-.date-time {
-  text-transform: uppercase;
-  font-size: $font-size-small;
-  font-weight: $font-weight-semi-bold;
-}
-
-.pager {
-  font-size: $font-size-small;
-  font-weight: $font-weight-black;
-  color: var(--color-text);
-  text-align: left;
-  margin-top: 2rem;
 }
