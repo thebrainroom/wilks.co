@@ -6,19 +6,25 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		
 		{{ if .IsHome }}
-		<title>Tom Wilks - Web Developer from Manchester</title>
+			<title>Tom Wilks - Web Developer from Manchester</title>
 		{{ else }}
-		<title>{{ .Title }} - Tom Wilks - Web Developer from Manchester</title>
+			<title>{{ .Title }} - Tom Wilks - Web Developer from Manchester</title>
 		{{ end }}
-		{{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
-		{{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
+
+		{{ if .IsHome }}
+			{{ partial "meta-home" . }}
+		{{ else }}
+			{{ partial "meta" . }}
+		{{ end }}
+
 		<link rel="preconnect" href="//fonts.gstatic.com/" crossorigin>
 		<link rel="preconnect" href="//fonts.googleapis.com" crossorigin>
 		<link rel="stylesheet" href="{{ "css/main.css" | relURL }}">
 		{{ with .OutputFormats.Get "RSS" -}}
 			{{ printf `<link rel="%s" type="%s" href="%s" title="%s">` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}
 		{{- end }}
-		<link rel="icon" href="{{ "images/favicon.ico" | relURL }}" type="image/x-icon" />
+		<link rel="icon" type="image/svg+xml" href="{{ "images/favicon.svg" | relURL }}">
+		<!-- <link rel="icon" href="{{ "images/favicon.ico" | relURL }}" type="image/x-icon" /> -->
 	</head>
 	<body class="theme-{{ lower .Page.Type }}{{ if .IsHome }} is-front{{ end }} ">
 		{{ partial "header" . }}
@@ -26,6 +32,6 @@
 			{{ block "main" . }}{{ end }}
 		</main>
 		{{ partial "footer" . }}
-		<script src="{{ "scripts/main.js" | relURL }}" type="text/javascript"></script>
+		<script src="{{ "scripts/main.js" | relURL }}"></script>
 	</body>
 </html>
