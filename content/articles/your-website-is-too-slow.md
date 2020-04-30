@@ -8,7 +8,11 @@ theme: "performance"
 
 Web optimisation is not a new concept, we do it everyday when we compress our images or tidy up some unnecessary code. While these habits are good they don't quite touch the surface of whats possible with good optimization practices. 
 
-This is just a short introduction to what's possible when optimizing your site. ## The tools Before setting out on your optimizing adventure you're going to need some tools. There are tons of freely available tools that will measure the speed of your site; my personal favourites are [Google Website Optimizer](https://www.google.com/websiteoptimizer/ "Google Website Optimizer") and [Pingdom Tools](http://tools.pingdom.com/fpt/ "Pingdom Tools"). 
+This is just a short introduction to what's possible when optimizing your site. 
+
+## The tools 
+
+Before setting out on your optimizing adventure you're going to need some tools. There are tons of freely available tools that will measure the speed of your site; my personal favourites are [Google Website Optimizer](https://www.google.com/websiteoptimizer/ "Google Website Optimizer") and [Pingdom Tools](http://tools.pingdom.com/fpt/ "Pingdom Tools"). 
 
 Pop the website you want to test into the relevant fields and let the tools do their things. At this point you're going to know if your website speed sucks or if you're doing things right. Either way you're probably going to be able to find room for improvement. 
 
