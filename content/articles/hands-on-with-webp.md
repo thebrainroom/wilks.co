@@ -2,7 +2,8 @@
 title: "Hands-On with WebP"
 date: 2013-10-24
 draft: false
-tags: [performance]
+tags:
+  - Performance
 theme: "performance"
 ---
 

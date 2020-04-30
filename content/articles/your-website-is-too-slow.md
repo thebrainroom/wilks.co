@@ -2,7 +2,8 @@
 title: "Your website is too slow"
 date: 2012-07-26
 draft: false
-tags: [performance]
+tags:
+  - Performance
 theme: "performance"
 ---
 

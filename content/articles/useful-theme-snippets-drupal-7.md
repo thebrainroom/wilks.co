@@ -2,7 +2,8 @@
 title: "Useful Theme Snippets For Drupal 7"
 date: 2014-08-11
 draft: false
-tags: [drupal]
+tags:
+  - Drupal 7
 theme: "drupal"
 ---
 

@@ -2,7 +2,8 @@
 title: "Rest your brain"
 date: 2012-08-25
 draft: false
-tags: [personal]
+tags:
+  - Personal
 theme: "personal"
 ---
 

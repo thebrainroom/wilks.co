@@ -2,7 +2,8 @@
 title: "Our digital legacy"
 date: 2012-11-29
 draft: false
-tags: [personal]
+tags:
+  - Personal
 theme: "personal"
 ---
 
