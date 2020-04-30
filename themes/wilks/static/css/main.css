@@ -587,27 +587,48 @@ main {
 
 .teaser {
   position: relative;
-  display: block;
-  background-color: rgba(0, 0, 0, 0.05);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   height: 100%;
   border-radius: 0.5rem;
   text-decoration: none;
-  -webkit-transition: ease-in-out all 0.2s;
-  transition: ease-in-out all 0.2s;
+  -webkit-transition: ease-in-out transform 0.2s;
+  transition: ease-in-out transform 0.2s;
+  background-color: #FFF;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02), 0 2px 4px rgba(0, 0, 0, 0.02), 0 4px 8px rgba(0, 0, 0, 0.02), 0 8px 16px rgba(0, 0, 0, 0.02), 0 16px 32px rgba(0, 0, 0, 0.02), 0 32px 64px rgba(0, 0, 0, 0.02);
+          box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02), 0 2px 4px rgba(0, 0, 0, 0.02), 0 4px 8px rgba(0, 0, 0, 0.02), 0 8px 16px rgba(0, 0, 0, 0.02), 0 16px 32px rgba(0, 0, 0, 0.02), 0 32px 64px rgba(0, 0, 0, 0.02);
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 
 .teaser:hover, .teaser:focus {
-  background-color: #ffeb6b;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.teaser__image {
+  background-color: rgba(0, 0, 0, 0.05);
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  padding: 4rem 2rem;
+}
+
+.teaser__image img {
+  height: 4rem;
+  max-width: none;
+  width: auto;
+  display: block;
+  margin: auto;
 }
 
 .teaser__content {
   text-align: left;
-  background-color: #FFF;
-  border-radius: 0.5rem;
   padding: 4rem;
-  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02), 0 2px 4px rgba(0, 0, 0, 0.02), 0 4px 8px rgba(0, 0, 0, 0.02), 0 8px 16px rgba(0, 0, 0, 0.02), 0 16px 32px rgba(0, 0, 0, 0.02), 0 32px 64px rgba(0, 0, 0, 0.02);
-          box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02), 0 2px 4px rgba(0, 0, 0, 0.02), 0 4px 8px rgba(0, 0, 0, 0.02), 0 8px 16px rgba(0, 0, 0, 0.02), 0 16px 32px rgba(0, 0, 0, 0.02), 0 32px 64px rgba(0, 0, 0, 0.02);
-  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -617,6 +638,9 @@ main {
           flex-direction: column;
   -webkit-transition: ease-in-out all 0.2s;
   transition: ease-in-out all 0.2s;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 @media only screen and (max-width: 40.625em) {
