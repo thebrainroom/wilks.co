@@ -16,7 +16,7 @@
   display: block;
   position: relative;
 
-  @media #{$breakpoint-large} {
+  @media #{$breakpoint-large-x} {
     width: 50%;
   }
 
@@ -30,16 +30,24 @@
 }
 
 .section {
-  padding: 10rem 10rem 10rem var(--gutter-left);
+  padding: 10rem 10rem 10rem var(--frame-gap);
   background-color: var(--theme-default);
   border-radius: 0.5rem;
 
+  @media #{$breakpoint-medium} {
+    padding: var(--frame-gap) 10rem 10rem 10rem;
+  }
+
   @media #{$breakpoint-small-x} {
-    padding: var(--gutter-left) 2rem 3rem 2rem;
+    padding: var(--frame-gap) 2rem 3rem 2rem;
   }
 }
 
 .section--latest {
+  @media #{$breakpoint-medium} {
+    padding: 7.5rem 10rem;
+  }
+
   @media #{$breakpoint-small-x} {
     padding: 3rem 2rem 3rem 2rem;
   }
@@ -59,13 +67,8 @@
 
 .section__heading {
   margin-top: 0;
-  margin-bottom: 3rem;
-  font-size: var(--font-size-section);
-  font-weight: bold;
-
-  @media #{$breakpoint-small-x} {
-    margin-bottom: 1rem;
-  }
+  margin-bottom: var(--section-gap);
+  font-weight: $font-weight-bold;
 
   a {
     border-radius: 0.5rem;
@@ -83,10 +86,10 @@
 
 .section__intro {
   font-size: var(--font-size-intro);
-  font-weight: 500;
+  font-weight: $font-weight-medium;
   line-height: 1.2;
   margin-bottom: 3rem;
-  max-width: 80rem;
+  max-width: 75rem;
 }
 
 .teaser {

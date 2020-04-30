@@ -1,39 +1,63 @@
+:root {
+  // Type
+  --font-size-h1: 6rem;
+  --font-size-h2: 3rem;
+  --font-size-h3: 2.5rem;
+  --font-size-text: 2rem;
+  --font-size-intro: 2.8rem;
+  --line-height: 1.5;
+  --v-rythm: 3rem;
+
+  @media #{$breakpoint-large} {
+    --font-size-h1: 4.5rem;
+    --font-size-intro: 2.5rem;
+  }
+
+  @media #{$breakpoint-medium} {
+    --font-size-h1: 4rem;
+  }
+
+  @media #{$breakpoint-small-x} {
+    --font-size-h1: 2.5rem;
+    --font-size-h2: 2rem;
+    --font-size-h3: 1.8rem;
+    --font-size-text: 1.6rem;
+    --font-size-intro: 1.6rem;
+    --line-height: 1.5;
+    --v-rythm: 2rem;
+  }
+}
+
 h1 {
-  font-weight: 800;
-  font-size: 5rem;
+  font-size: var(--font-size-h1);
+  font-weight: $font-weight-bold;
 }
 
 h2 {
-  font-size: 2.5rem;
-  font-weight: $font-weight-semi-bold;
-
-  @media #{$breakpoint-small-x} {
-    font-size: $font-size-regular;
-  }
+  font-size: var(--font-size-h2);
+  font-weight: $font-weight-bold;
 }
 
-em {
-  font-size: 1.2rem;
+h3 {
+  font-size: var(--font-size-h3);
+  font-weight: $font-weight-semi-bold;
 }
 
 .typography {
+  line-height: var(--line-height);
 
   * + * {
-    margin-top: 3rem;
-    margin-bottom: 3rem;
+    margin-top: var(--v-rythm);
+    margin-bottom: var(--v-rythm);
   }
 
   p {
-    font-size: 2rem;
-    line-height: 1.6;
-
-    @media #{$breakpoint-small-x} {
-      font-size: 1.5rem;
-      line-height: 1.5;
-    }
+    font-size: var(--font-size-text);
+    font-weight: $font-weight-medium;
   }
 
   > p:first-of-type {
+    font-size: calc(var(--font-size-text) + 0.2rem);
     font-weight: $font-weight-semi-bold;
   }
 
@@ -41,16 +65,11 @@ em {
   ul {
     list-style-position: inside;
     font-size: $font-size-regular;
-    line-height: 1.5;
 
     ul,
     ol {
       margin-bottom: 1rem;
       margin-left: 2rem;
-    }
-
-    @media #{$breakpoint-small-x} {
-      font-size: 1.5rem;
     }
 
     li {
@@ -60,16 +79,41 @@ em {
   }
 
   li a {
-    color: #111;
+    color: var(--color-text);
   }
 }
 
-a {
-  color: var(--color-text);
-  font-weight: $font-weight-bold;
+a:not([class]) {
+  color: var(--color-primary);
+  font-weight: $font-weight-semi-bold;
+  text-decoration: none;
 
   &:hover,
   &:focus {
-    text-decoration: none;
+    text-decoration: underline;
+  }
+}
+
+code:not([class]) {
+  display: inline-block;
+  padding: 0 0.5rem;
+  background-color: var(--theme-default);
+  border-radius: 0.5rem;
+  font-weight: $font-weight-bold;
+  margin: 0;
+}
+
+.highlight {
+  pre {
+    border-radius: 0.5rem;
+  }
+
+  code {
+    padding: 2rem;
+    display: block;
+    background: #373e4c;
+    font-size: calc(var(--font-size-text) - 0.2rem);
+    overflow-x: scroll;
+    border-radius: 0.5rem;
   }
 }

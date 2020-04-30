@@ -4,44 +4,13 @@ main {
   padding: var(--frame);
 }
 
-code {
-  display: inline-block;
-  padding: 0 0.5rem;
-  background-color: $color-secondary-default;
-  border-radius: 0.5rem;
-  font-weight: $font-weight-bold;
-}
-
-.highlight {
-  pre {
-    border-radius: 0.5rem;
-  }
-
-  code {
-    padding: 2rem;
-    display: block;
-    background: #0C090D;
-    font-size: 1.8rem;
-    line-height: 1.3;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    overflow: scroll;
-    border: 0.1rem solid rgba($color-light, 0.1);
-    font-weight: 500;
-    border-radius: 0.5rem;
-
-    @media #{$breakpoint-small-x} {
-      font-size: 1.5rem;
-    }
-  }
-}
-
 .content {
-  padding-left: var(--gutter-left);
+  padding-left: var(--frame-gap);
   padding-bottom: var(--section-gap);
 
   @media #{$breakpoint-small-x} {
-    padding-left: 0;
+    padding-left: var(--section-gap);
+    padding-right: var(--section-gap);
   }
 }
 
