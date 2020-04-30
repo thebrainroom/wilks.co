@@ -19,8 +19,9 @@ Drupal ships with a set of pre-made stylesheets that help with the theming of fo
 These files can be removed in your `template.php` like so:
 
 ``` php
-// Turn off styles from system/contrib modules
+<?php // WARN: only one set of opening tags at the top of template.php
 
+// Turn off styles from system/contrib modules
 function THEMENAME_css_alter(&$css) {
   unset($css[drupal_get_path('module', 'system') . '/system.theme.css']);
   unset($css[drupal_get_path('module', 'system') . '/system.menus.css']);
@@ -33,6 +34,8 @@ function THEMENAME_css_alter(&$css) {
 When theming different node view types such as full content or teaser, we ideally want to seperate the logic from the templates where possible. Rather than checking for the `$teaser` variable in a standard node template (for example, node--article.tpl.php) we can create a new theme suggestion like so in the `template.php` file:
 
 ```php
+<?php // WARN: only one set of opening tags at the top of template.php
+
 function THEMENAME_preprocess_node(&$vars) {
   
   // Adds a node template suggestion for teasers e.g. node--article--teaser.tpl.php
@@ -54,8 +57,9 @@ It's possible when theming more complex sites that you'll require more display m
 Now presuming you have the backbone of your module setup. Add the following code to your custom module:
 
 ```php
-// Implements hook_entity_info_alter().
+<?php // WARN: only one set of opening tags at the top of module
 
+// Implements hook_entity_info_alter().
 function YOURMODULENAME_entity_info_alter(&$entity_info) {
   $entity_info['node']['view modes']['custom_display'] = array(
     'label' => t('Custom Display'),
@@ -69,6 +73,8 @@ Now we've got the code in place for the custom display clear the cache and you s
 For this to become useful we need to add a template suggestion to allow us to theme it. This will exist within `preprocess_node()` like the earlier example.
 
 ```php
+<?php // WARN: only one set of opening tags at the top of template.php
+
 if($vars['view_mode'] == 'custom_display') {
   $vars['theme_hook_suggestions'][] = 'node__' . $vars['type'] . '__custom-display';
   // Creates theme suggestion for node--contenttype--custom-display.tpl.php
@@ -81,9 +87,9 @@ if($vars['view_mode'] == 'custom_display') {
 Theme includes can be really useful if your theme adopts a large number of page templates and you don't want to be duplicating large chunks of code that might be modified in the future. A good example of this is a header or footer section.
 
 ```php
+<?php // WARN: only one set of opening tags at the top of template.php
 
 // Allows use of theme includes and template suggestions
-
 function THEMENAME_theme() {
   return array(
     'header' => array(
@@ -108,10 +114,8 @@ Theme functions also allow you to pass arguments to them. This might be useful w
 
 ```php
 <?php print theme('header', array(
-
   // Pass in variables that are required
   "page" => $page,
-
 )); ?>
 ```
 

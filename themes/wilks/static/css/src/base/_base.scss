@@ -1,10 +1,7 @@
 // sass-lint:disable-block no-vendor-prefixes
 :root {
   --font-family: "Quicksand", sans-serif;
-  --font-size-largest: 6rem;
   --font-size-logo: 6rem;
-  --font-size-section: 4rem;
-  --font-size-intro: 3.5rem;
   --color-text: #1C1C1C;
   --color-contrast-primary: #000;
   --color-contrast-secondary: #FFF;
@@ -12,27 +9,22 @@
   --theme-default: #ffeb6b;
   --theme-article: #cbfabe;
   --theme-work: #be9bdf7a;
-  --gutter-left: 35rem;
+  --frame-gap: 35rem;
   --frame: 7.5rem;
-  --section-gap: 7.5rem;
+  --section-gap: 5rem;
 
   @media #{$breakpoint-large} {
-    --gutter-left: 20rem;
+    --frame-gap: 20rem;
     --frame: 5rem;
     --section-gap: 5rem;
-    --font-size-largest: 4rem;
     --font-size-logo: 4rem;
-    --font-size-intro: 3.2rem;
   }
 
   @media #{$breakpoint-small-x} {
-    --gutter-left: 13rem;
+    --frame-gap: 13rem;
     --frame: 2rem;
     --section-gap: 2rem;
-    --font-size-largest: 2rem;
     --font-size-logo: 3rem;
-    --font-size-intro: 1.8rem;
-    --font-size-section: 2rem;
   }
 }
 
