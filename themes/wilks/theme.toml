@@ -8,11 +8,11 @@ description = "Tom Wilks is a Manchester based Web Developer specialising in Fro
 homepage = "https://wilks.co/"
 tags = []
 features = []
-min_version = "0.38.1"
+min_version = "0.65.3"
 
 [author]
-  name = ""
-  homepage = ""
+  name = "Tom Wilks"
+  homepage = "https://wilks.co"
 
 # If porting an existing theme
 [original]

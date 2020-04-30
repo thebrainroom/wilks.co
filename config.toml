@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "https://wilks.co"
 languageCode = "en"
 title = "Tom Wilks - Web Developer from Manchester"
 description = "Tom Wilks is a Manchester based Web Developer specialising in Front End and Drupal development."
