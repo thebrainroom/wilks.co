@@ -563,7 +563,7 @@ main {
   font-weight: 700;
 }
 
-.section__heading a {
+.section__button {
   border-radius: 0.5rem;
   padding: 0.5rem 1rem;
   display: inline-block;
