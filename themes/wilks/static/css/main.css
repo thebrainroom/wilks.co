@@ -460,6 +460,12 @@ main {
   padding-bottom: var(--section-gap);
 }
 
+@media only screen and (max-width: 40.625em) {
+  .content {
+    padding-left: 0;
+  }
+}
+
 .content__main {
   max-width: 80rem;
 }

@@ -7,6 +7,10 @@ main {
 .content {
   padding-left: var(--frame-gap);
   padding-bottom: var(--section-gap);
+
+  @media #{$breakpoint-small-x} {
+    padding-left: 0;
+  }
 }
 
 .content__main {
