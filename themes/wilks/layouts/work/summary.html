@@ -4,8 +4,14 @@
   </div>
   <div class="teaser__content">
     <h2 class="teaser__title">{{ .Title }}</h2>
-    {{ if .Params.intro }}
-    <p class="teaser__footer">{{ .Params.intro }}</p>
-    {{ end }}
+    <div class="teaser__footer">
+      {{ if .Params.tags }}
+      <ul class="tags">
+        {{ range .Params.tags }}
+        <li class="tags__item">{{ . }}</li>
+        {{ end }}
+      </ul>
+      {{ end }}
+    </div>
   </div>
 </a>
