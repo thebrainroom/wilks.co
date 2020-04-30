@@ -6,6 +6,9 @@ draft: false
 logo: vale.svg
 color: "#58ac7d"
 layout: case-study
+tags:
+  - Front End
+  - Drupal 8
 website: "https://valeholidayparks.com"
 ---
 

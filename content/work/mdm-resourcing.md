@@ -6,5 +6,8 @@ draft: false
 logo: mdm.svg
 color: "#335d71"
 layout: case-study
+tags:
+  - Front End
+  - Drupal 7
 website: "https://mdmresourcing.com/"
 ---

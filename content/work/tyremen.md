@@ -6,5 +6,10 @@ draft: false
 logo: tyremen.png
 color: "#022f51"
 layout: case-study
+tags:
+  - Front End
+  - Drupal 7
+  - PHP
+  - eCommerce
 website: "https://tyremen.co.uk"
 ---
