@@ -52,6 +52,16 @@
   }
 }
 
+.button--twitter {
+  color: #FFF;
+  background-color: #1da1f2;
+  background-image: url("../images/twitter-icon.svg");
+  background-repeat: no-repeat;
+  background-position: left 2rem center;
+  padding-left: 6rem;
+  background-size: 2.5rem auto;
+}
+
 :root {
   --font-family: "Quicksand", sans-serif;
   --font-size-logo: 6rem;
@@ -243,6 +253,10 @@ code:not([class]) {
   font-size: calc(var(--font-size-text) - 0.2rem);
   overflow-x: scroll;
   border-radius: 0.5rem;
+}
+
+.language-php span:nth-child(1) {
+  display: none;
 }
 
 img,

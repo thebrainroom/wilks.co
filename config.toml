@@ -22,7 +22,6 @@ theme = "wilks"
     name = "Articles"
     url = "/articles"
     weight = -90
-pygmentsUseClasses=true
 [markup]
   [markup.highlight]
     codeFences = true
@@ -30,7 +29,7 @@ pygmentsUseClasses=true
     hl_Lines = ""
     lineNoStart = 1
     lineNos = false
-    lineNumbersInTable = true
+    lineNumbersInTable = false
     noClasses = true
     style = "monokai"
-    tabWidth = 4
+    tabWidth = 2

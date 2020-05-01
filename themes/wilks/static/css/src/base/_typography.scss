@@ -117,3 +117,10 @@ code:not([class]) {
     border-radius: 0.5rem;
   }
 }
+
+// Hack to prevent php opening tags showing
+.language-php {
+  span:nth-child(1) {
+    display: none;
+  }
+}
