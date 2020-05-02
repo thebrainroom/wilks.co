@@ -1,12 +1,16 @@
-{{ with .Site.Params.description }}
-<meta name="description" content="{{ . }}">
+{{ if .Page.Params.description }}
+<meta name="description" content="{{ .Page.Params.description }}" />
+{{ else if .Site.Params.description }}
+<meta name="description" content="{{ .Site.Params.description }}" />
 {{ end }}
 {{ with .Site.Params.author }}
 <meta name="author" content="{{ . }}">
 {{ end }}
-<meta property="og:title" content="Tom Wilks - Web Developer from Manchester" />
-{{ with .Site.Params.description }}
-<meta name="og:description" content="{{ . }}" />
+<meta property="og:title" content="{{ .Site.Params.Title }}" />
+{{ if .Page.Params.description }}
+<meta name="og:description" content="{{ .Page.Params.description }}" />
+{{ else if .Site.Params.description }}
+<meta name="og:description" content="{{ .Site.Params.description }}" />
 {{ end }}
 <meta property="og:type" content="website" />
 <meta property="og:url" content="{{ .Permalink }}" />

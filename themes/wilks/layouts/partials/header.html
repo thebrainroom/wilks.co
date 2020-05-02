@@ -1,9 +1,9 @@
 <header class="site-header {{ if .IsHome }}site-header--home{{ end }}">
   <nav class="site-nav">
-    <a href="{{ .Site.BaseURL }}" class="logo">Tom <br>Wilks.</a>
+    <a href="{{ .Site.BaseURL }}" title="Return to homepage" class="logo">Tom <br>Wilks.</a>
     {{ with .Site.Menus.main}}
       {{ range sort . }}
-        <a class="site-nav__link js-nav-link" href="{{ .URL | relURL }}">{{ .Name }}</a>
+        <a href="{{ .URL | relURL }}" title="Visit {{ .Name }} Page" class="site-nav__link js-nav-link">{{ .Name }}</a>
       {{ end }}
     {{ end }}
   </nav>

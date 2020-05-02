@@ -2,15 +2,15 @@
 
 {{ if .IsHome }}
 <div class="banner banner--front animate">
-  <h1 class="banner__title">I am a front end developer &amp; Drupal specialist based in sunny Manchester.</h1>
+  <h1 class="banner__title">I am a front-end web developer &amp; Drupal specialist based in sunny Manchester.</h1>
   <p class="banner__intro">I've been tinkering with all things web since 2005.</p>
-  <a class="button" href="/about">More about me</a>
+  <a class="button" href="/about" title="More about Tom Wilks">More about me</a>
 </div>
 {{ end }}
 
 {{ with .Site.GetPage "section" "work" }}
 <section class="section section--work section--latest animate">
-  <h2 class="section__heading">Latest Work <a href="/work" class="section__button">View all</a></h2>
+  <h2 class="section__heading">Latest Work <a href="/work" class="section__button" title="View all work">View all</a></h2>
   <ol class="post-list">
     {{ range ( first 6 ( where .Site.RegularPages "Section" "work" ) ) }}
     <li class="post-list__item">{{ .Render "summary" }}</li>
@@ -20,7 +20,7 @@
 {{ end }}
 
 <section class="section section--articles section--latest animate">
-  <h2 class="section__heading">Latest Articles <a href="/articles" class="section__button">View all</a></h2>
+  <h2 class="section__heading">Latest Articles <a href="/articles" class="section__button" title="View all articles">View all</a></h2>
   <ol class="post-list">
     {{ range ( first 3 ( where .Site.RegularPages "Section" "articles" ) ) }}
     <li class="post-list__item">{{ .Render "summary" }}</li>

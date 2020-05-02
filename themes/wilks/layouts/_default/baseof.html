@@ -6,9 +6,9 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		
 		{{ if .IsHome }}
-			<title>Tom Wilks - Web Developer from Manchester</title>
+			<title>{{ .Site.Params.Title }}</title>
 		{{ else }}
-			<title>{{ .Title }} - Tom Wilks - Web Developer from Manchester</title>
+			<title>{{ .Title }} - {{ .Site.Params.Title }}</title>
 		{{ end }}
 
 		{{ if .IsHome }}
