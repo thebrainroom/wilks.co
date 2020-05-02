@@ -1,5 +1,6 @@
 ---
 title: "Rest your brain"
+description: "I didn't realise how tired I was until I had a holiday."
 date: 2012-08-25
 draft: false
 tags:

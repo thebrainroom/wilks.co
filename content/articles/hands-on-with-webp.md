@@ -1,5 +1,6 @@
 ---
 title: "Hands-On with WebP"
+description: "I've been following the progress of WebP for the last year and thought it was about time I actually investigated it a little further and tried it out for myself. "
 date: 2013-10-24
 draft: false
 tags:

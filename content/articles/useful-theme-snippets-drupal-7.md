@@ -1,5 +1,6 @@
 ---
 title: "Useful Theme Snippets For Drupal 7"
+description: "We spend a lot of time trying to make working with Drupal easier for the whole team, so over the past few months I've been working on tools that speed up Drupal development and make our products more consistent."
 date: 2014-08-11
 draft: false
 tags:

@@ -1,5 +1,6 @@
 ---
 title: "Our digital legacy"
+description: "I've been thinking a lot recently about cloud based services like Spotify and Netflix. I get so much out of them. I had a horrible thought recently, I have absolutely nothing to show for my money."
 date: 2012-11-29
 draft: false
 tags:

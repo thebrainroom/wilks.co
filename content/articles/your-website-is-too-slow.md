@@ -1,5 +1,6 @@
 ---
 title: "Your website is too slow"
+description: "Web optimisation is not a new concept, we do it everyday when we compress our images or tidy up some unnecessary code."
 date: 2012-07-26
 draft: false
 tags:

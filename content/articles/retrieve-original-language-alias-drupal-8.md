@@ -1,5 +1,6 @@
 ---
 title: "Retrieve original language alias in Drupal 8"
+description: "Multilingual sites are complex beasts and logic that should be simple becomes more convuluted. Something as simple as using an URL alias within an if statement becomes a trivial task as that alias becomes translatable."
 date: 2018-07-03
 draft: false
 slug: "retrieve-original-language-alias-drupal-8"
