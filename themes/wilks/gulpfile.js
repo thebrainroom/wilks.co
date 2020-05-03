@@ -9,12 +9,16 @@ const babel = require('gulp-babel')
 const sourcemaps = require('gulp-sourcemaps')
 const standard = require('gulp-semistandard')
 const imagemin = require('gulp-imagemin');
+const cleanCSS = require('gulp-clean-css');
+const terser = require('gulp-terser');
 
 const styleInput = './static/css/src/**/*.scss'
 const styleOutput = './static/css/'
+const styleCompiled = './static/css/*.css'
 
 const scriptInput = './static/scripts/src/**/*.js'
 const scriptOutput = './static/scripts/'
+const scriptCompiled = './static/scripts/*.js'
 
 const imageInput = './static/images/src/*'
 const imageOutput = './static/images/'
@@ -47,6 +51,13 @@ function styles() {
   );
 }
 
+function minifyStyles() {
+  return gulp
+    .src(styleCompiled)
+    .pipe(cleanCSS())
+    .pipe(gulp.dest(styleOutput));
+}
+
 // Lint source scripts with standard
 function lintScripts() {
   return gulp
@@ -72,6 +83,13 @@ function scripts() {
   );
 }
 
+function minifyScripts() {
+  return gulp
+    .src(scriptCompiled)
+    .pipe(terser())
+    .pipe(gulp.dest(scriptOutput));
+}
+
 // Compress all images using imagemin
 function images() {
   return gulp
@@ -93,7 +111,7 @@ const js = gulp.series(lintScripts, scripts);
 // Lint and compile styles only
 const css = gulp.series(lintStyles, styles);
 // Lint styles and scripts then compile styles, scripts and images
-const build = gulp.series(lintStyles, gulp.parallel(styles, images));
+const build = gulp.series(lintStyles, gulp.parallel(styles, images), minifyStyles, minifyScripts);
 // As above but then watch for changes in styles, scripts and images
 const watch = gulp.series(build, gulp.parallel(watchAssets));
 

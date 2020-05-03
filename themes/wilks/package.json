@@ -28,6 +28,7 @@
     "babel-preset-env": "^1.7.0",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
     "gulp-eslint": "^6.0.0",
     "gulp-imagemin": "^7.1.0",
     "gulp-postcss": "^8.0.0",
@@ -35,6 +36,7 @@
     "gulp-sass-lint": "^1.4.0",
     "gulp-semistandard": "^1.0.0",
     "gulp-sourcemaps": "^2.6.5",
+    "gulp-terser": "^1.2.0",
     "sass-lint": "^1.13.1"
   },
   "browserslist": [
