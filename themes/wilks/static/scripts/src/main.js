@@ -1,6 +1,6 @@
-WebFontConfig = {
+const WebFontConfig = {
   google: {
-    families: ['Quicksand:400,500,600,700&display=swap']
+    families: ['Quicksand:500,600,700&display=swap']
   },
   timeout: 2000
 };
