@@ -120,7 +120,7 @@
   color: $color-primary-default;
   transition: 0.2s ease-in-out color;
   text-transform: lowercase;
-  
+
   @media #{$breakpoint-medium} {
     margin-bottom: 0;
     margin-right: 10rem;
