@@ -76,7 +76,7 @@ function scripts() {
     .src(scriptInput)
     .pipe(sourcemaps.init())
     .pipe(babel({
-      presets: ['env']
+      presets: ['@babel/preset-env']
     }))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(scriptOutput)
@@ -111,7 +111,7 @@ const js = gulp.series(lintScripts, scripts);
 // Lint and compile styles only
 const css = gulp.series(lintStyles, styles);
 // Lint styles and scripts then compile styles, scripts and images
-const build = gulp.series(lintStyles, gulp.parallel(styles, images), minifyStyles, minifyScripts);
+const build = gulp.series(lintStyles, gulp.parallel(styles, scripts, images), minifyStyles, minifyScripts);
 // As above but then watch for changes in styles, scripts and images
 const watch = gulp.series(build, gulp.parallel(watchAssets));
 
