@@ -1,9 +1,10 @@
 <header class="site-header {{ if .IsHome }}site-header--home{{ end }}">
   <nav class="site-nav">
     <a href="{{ .Site.BaseURL }}" title="Return to homepage" class="logo">Tom <br>Wilks.</a>
+    {{ $currentPage := . }}
     {{ with .Site.Menus.main}}
       {{ range sort . }}
-        <a href="{{ .URL | relURL }}" title="Visit {{ .Name }} Page" class="site-nav__link js-nav-link">{{ .Name }}</a>
+        <a href="{{ .URL | relURL }}" title="Visit {{ .Name }} Page" data-link-type="{{.Identifier}}" class="site-nav__link {{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}is-active{{ end }}">{{ .Name }}</a>
       {{ end }}
     {{ end }}
   </nav>
