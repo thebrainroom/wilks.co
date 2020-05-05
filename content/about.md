@@ -6,6 +6,12 @@ slug: about
 type: default
 layout: page-single
 intro: 
+linktitle: About
+menu: 
+  main:
+    title: About
+    weight: -1
+    identifier: about
 ---
 Hi there, I'm Tom and I'm a Web Developer from Manchester focusing on Front End and Drupal development. I've been developing websites and web applications commercially since 2010 and dabbling in all things web since 2005.
 
