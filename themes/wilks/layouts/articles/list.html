@@ -1,6 +1,6 @@
 {{ define "main" }}
 <section class="section section--articles animate fadein">
-  <h1 class="section__heading">All {{ .Title }}</h1>
+  <h1 class="section__heading">{{ .Title }}</h1>
   {{ if .Params.intro }}
   <p class="section__intro">{{ .Params.intro }}</p>
   {{ end }}
