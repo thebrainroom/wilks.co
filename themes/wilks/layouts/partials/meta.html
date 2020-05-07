@@ -1,17 +1,27 @@
-{{ if .Page.Params.description }}
-<meta name="description" content="{{ .Page.Params.description }}" />
-{{ else if .Site.Params.description }}
-<meta name="description" content="{{ .Site.Params.description }}" />
+{{ if .IsHome }}
+<title>{{ .Site.Params.Title }}</title>
+<meta property="og:title" content="{{ .Site.Params.Title }}" />
+<meta name="twitter:title" content="{{ .Site.Params.Title }}">
+{{ else }}
+<title>{{ .Title }} - Tom Wilks</title>
+<meta property="og:title" content="{{ .Title }}" />
+<meta name="twitter:title" content="{{ .Title }}">
 {{ end }}
 {{ with .Site.Params.author }}
 <meta name="author" content="{{ . }}">
 {{ end }}
-<meta property="og:title" content="{{ .Title }} - {{ .Site.Params.Title }}" />
 {{ if .Page.Params.description }}
+  <meta name="description" content="{{ .Page.Params.description }}" />
   <meta name="og:description" content="{{ .Page.Params.description }}" />
+  <meta name="twitter:description" content="{{ .Page.Params.description }}">
 {{ else if .Site.Params.description }}
+  <meta name="description" content="{{ .Site.Params.description }}" />
   <meta name="og:description" content="{{ .Site.Params.description }}" />
+  <meta name="twitter:description" content="{{ .Site.Params.description }}">
 {{ end }}
 <meta property="og:type" content="website" />
 <meta property="og:url" content="{{ .Permalink }}" />
 <meta property="og:image" content="{{ "images/share.png" | absURL }}" />
+<meta property="og:site_name" content="{{ .Site.Params.Title }}">
+<meta name="twitter:site" content="@thebrainroom">
+<meta name="twitter:image:alt" content="Image for {{ .Title }}">
