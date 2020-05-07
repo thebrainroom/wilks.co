@@ -17,7 +17,7 @@ Luckily this is easy to fix without the help of support.
 
 ## Changing Hugo version on Netlify
 
-To use your Hugo version of choice, from the Netlify admin panel navigate to `https://app.netlify.com/sites/YOURSITE/settings/deploys#environment-variables` or `Build & deploy -> Environment`.
+To use your Hugo version of choice, from the Netlify admin panel navigate to **https://app.netlify.com/sites/YOURSITE/settings/deploys#environment-variables** or `Build & deploy -> Environment`.
 
 Click the **Edit Variables** button and then the **New variable** button.
 
