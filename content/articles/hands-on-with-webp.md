@@ -43,8 +43,6 @@ I'm not going to get into the technical side of installing and using WebP in thi
 
 ![PNG Image](/img/transparent-example.png "PNG Image")
 
-[Test Image PNG](/images/articles/hands-on-webp/transparent-example.png)
-
 Above is an example of a large transparent PNG being compressed losslessly.
 
 * Resolution 3000px x 800px
@@ -53,8 +51,6 @@ Above is an example of a large transparent PNG being compressed losslessly.
 ### Exhibit 1: WebP
 
 ![Transparent WebP Image](/img/transparent-example.webp "Transparent WebP Image")
-
-[Test Image WebP - 100% Lossless](/images/articles/hands-on-webp/transparent-example.webp)
 
 Now we have the output of the original PNG in WebP at 100% quality and using a lossless output.
 
@@ -67,11 +63,7 @@ Flags used:
 ./cwebp transparent-example.png -q 100 -lossless -o transparent-example-80.webp
 ```
 
-<img src="/images/articles/hands-on-webp/transparent-example-80.webp" alt="WebP Image" />
-
 ![WebP Image](/img/transparent-example-80.webp "WebP Image")
-
-[Test Image WebP - 80% Lossy](/images/articles/hands-on-webp/transparent-example-80.webp)
 
 Finally, this is the output of the original PNG in WebP at 80% quality and using a lossy output.
 
