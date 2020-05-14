@@ -1,13 +1,14 @@
 ---
-title: "Hands-On with WebP"
-description: "I've been following the progress of WebP for the last year and thought it was about time I actually investigated it a little further and tried it out for myself. "
-date: 2013-10-24
+title: Hands-On with WebP
+date: 2013-10-24T00:00:00.000Z
+description: "I've been following the progress of WebP for the last year and
+  thought it was about time I actually investigated it a little further and
+  tried it out for myself. "
 draft: false
 tags:
   - Performance
-theme: "performance"
+theme: performance
 ---
-
 I've been following the progress of WebP for the last year and thought it was about time I actually investigated it a little further and tried it out for myself. 
 
 Reducing page load speed is something that's incredibly important in a world where millions of devices can access the web with a multitude of conditions, and Google are trying to do something to tackle slow page load speeds. Google describes WebP as: 
@@ -40,7 +41,7 @@ I'm not going to get into the technical side of installing and using WebP in thi
 
 ### Exhibit 1: PNG
 
-<img src="/images/articles/hands-on-webp/transparent-example.png" alt="PNG Image" />
+![PNG Image](/img/transparent-example.png "PNG Image")
 
 [Test Image PNG](/images/articles/hands-on-webp/transparent-example.png)
 
@@ -51,7 +52,7 @@ Above is an example of a large transparent PNG being compressed losslessly.
 
 ### Exhibit 1: WebP
 
-<img src="/images/articles/hands-on-webp/transparent-example.webp" alt="WebP Image" />
+![Transparent WebP Image](/img/transparent-example.webp "Transparent WebP Image")
 
 [Test Image WebP - 100% Lossless](/images/articles/hands-on-webp/transparent-example.webp)
 
@@ -62,11 +63,13 @@ Now we have the output of the original PNG in WebP at 100% quality and using a l
 
 Flags used:
 
-``` bash
+```bash
 ./cwebp transparent-example.png -q 100 -lossless -o transparent-example-80.webp
 ```
 
 <img src="/images/articles/hands-on-webp/transparent-example-80.webp" alt="WebP Image" />
+
+![WebP Image](/img/transparent-example-80.webp "WebP Image")
 
 [Test Image WebP - 80% Lossy](/images/articles/hands-on-webp/transparent-example-80.webp)
 
@@ -77,7 +80,7 @@ Finally, this is the output of the original PNG in WebP at 80% quality and using
 
 Flags used:
 
-``` bash
+```bash
 ./cwebp transparent-example.png -q 80 -o transparent-example-80.webp
 ```
 
@@ -87,4 +90,4 @@ What we have here is pretty impressive. We've managed to shrink the filesize wit
 
 It's safe to say WebP is a serious contender for use on the web. It demonstrates serious compression rates with minimal quality loss and the ability to freely refine its compression modes depending on the image at hand.
 
-As with any new technology it needs adoption rates and support from other browser manufacturers. Will Mozilla and Apple want to adopt Google's technology? Mozilla are [currently on the fence](http://news.cnet.com/8301-1023_3-57608064-93/mozilla-unimpressed-with-googles-web-photo-standard/) regarding WebP and have not been too impressed with their own tests. 
+As with any new technology it needs adoption rates and support from other browser manufacturers. Will Mozilla and Apple want to adopt Google's technology? Mozilla are [currently on the fence](http://news.cnet.com/8301-1023_3-57608064-93/mozilla-unimpressed-with-googles-web-photo-standard/) regarding WebP and have not been too impressed with their own tests.
