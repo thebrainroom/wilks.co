@@ -20,6 +20,7 @@
 			{{ block "main" . }}{{ end }}
 		</main>
 		{{ partial "footer" . }}
+		<script src="//identity.netlify.com/v1/netlify-identity-widget.js"></script>
 		<script src="{{ "scripts/main.js" | relURL }}"></script>
 	</body>
 </html>
