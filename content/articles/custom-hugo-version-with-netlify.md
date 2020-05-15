@@ -1,11 +1,14 @@
 ---
-title: "Custom Hugo version with Netlify"
-description: "Hugo and Netlify are a match made in heaven, with continuous deployment, custom domain names and a tons of other goodies it's never been easier spin up a static site"
-date: 2020-05-07T10:57:55+10:00
-draft: false
+title: Custom Hugo version with Netlify
+date: 2020-05-07T00:57:55.000Z
 tags:
   - Hugo
   - Netlify
+  - Test
+description: Hugo and Netlify are a match made in heaven, with continuous
+  deployment, custom domain names and a tons of other goodies it's never been
+  easier spin up a static site
+draft: false
 ---
 Hugo and Netlify are a match made in heaven, with continuous deployment, custom domain names and a tons of other goodies it's never been easier spin up a static site.
 
