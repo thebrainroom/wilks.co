@@ -7,12 +7,11 @@
 		{{ partial "meta" . }}
 		<link rel="preconnect" href="//fonts.gstatic.com/" crossorigin>
 		<link rel="preconnect" href="//fonts.googleapis.com" crossorigin>
-		<link rel="stylesheet" href="{{ "css/main.css" | relURL }}">
+		<style>{{ readFile "themes/wilks/static/css/main.css" | safeCSS }}</style>
 		{{ with .OutputFormats.Get "RSS" -}}
 			{{ printf `<link rel="%s" type="%s" href="%s" title="%s">` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}
 		{{- end }}
 		<link rel="icon" type="image/svg+xml" href="{{ "images/favicon.svg" | relURL }}">
-		<!-- <link rel="icon" href="{{ "images/favicon.ico" | relURL }}" type="image/x-icon" /> -->
 	</head>
 	<body class="theme-{{ lower .Page.Type }}{{ if .IsHome }} is-front{{ end }} ">
 		{{ partial "header" . }}
@@ -20,7 +19,6 @@
 			{{ block "main" . }}{{ end }}
 		</main>
 		{{ partial "footer" . }}
-		<script src="//identity.netlify.com/v1/netlify-identity-widget.js"></script>
 		<script src="{{ "scripts/main.js" | relURL }}"></script>
 	</body>
 </html>
