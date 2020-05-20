@@ -78,7 +78,7 @@
   vertical-align: middle;
   text-decoration: none;
   color: var(--color-text);
-  background-color: #FFF;
+  background-color: var(--color-contrast-primary);
   font-size: 1.4rem;
   font-weight: $font-weight-bold;
   margin-left: 0.5rem;
@@ -100,8 +100,8 @@
   border-radius: 0.5rem;
   text-decoration: none;
   transition: ease-in-out transform 0.2s;
-  background-color: $color-light;
-  box-shadow: $box-shadow;
+  background-color: var(--color-teaser);
+  box-shadow: var(--box-shadow);
   transform: scale(1);
 
   &:hover,

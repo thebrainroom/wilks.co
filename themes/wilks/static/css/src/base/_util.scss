@@ -1,9 +1,9 @@
 .button {
   display: inline-block;
   padding: 1.5rem 2rem;
-  background-color: $color-light;
+  background-color: var(--color-contrast-primary);
   border-radius: 0.5rem;
-  box-shadow: $box-shadow;
+  box-shadow: var(--box-shadow);
   text-decoration: none;
   font-size: 2rem;
   color: var(--color-text);

@@ -3,12 +3,13 @@
   --font-family: "Quicksand", sans-serif;
   --font-size-logo: 6rem;
   --color-text: #1C1C1C;
-  --color-contrast-primary: #000;
-  --color-contrast-secondary: #FFF;
+  --color-contrast-primary: #FFF;
+  --color-teaser: #FFF;
   --color-primary: #d8033f;
-  --theme-default: #ffeb6b;
-  --theme-article: #cbfabe;
-  --theme-work: #be9bdf7a;
+  --theme-default: hsla(52, 100%, 71%, 1);
+  --theme-article: hsla(107, 86%, 86%, 1);
+  --theme-work: hsla(271, 52%, 74%, 0.75);
+  --box-shadow: 0 0.1rem 0.2rem rgba(0,0,0,0.02), 0 0.2rem 0.4rem rgba(0,0,0,0.02), 0 0.4rem 0.8rem rgba(0,0,0,0.02), 0 8px 1.6rem rgba(0,0,0,0.02), 0 1.6rem 3.2rem rgba(0,0,0,0.02), 0 3.2rem 6.4rem rgba(0,0,0,0.02);
   --frame-gap: 35rem;
   --frame: 7.5rem;
   --section-gap: 5rem;
@@ -60,4 +61,5 @@ body {
   line-height: 1;
   font-weight: 500;
   height: 100%;
+  background-color: var(--color-contrast-primary);
 }

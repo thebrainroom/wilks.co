@@ -4,11 +4,11 @@
   position: fixed;
   top: 0;
   left: 0;
-  background-color: $color-light;
+  background-color: var(--color-contrast-primary);
   background-position: bottom center;
   background-size: 100%;
   background-repeat: no-repeat;
-  box-shadow: $box-shadow;
+  box-shadow: var(--box-shadow);
   border-bottom-right-radius: 0.5rem;
 }
 
