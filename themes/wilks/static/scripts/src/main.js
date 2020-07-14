@@ -1,6 +1,7 @@
 const WebFontConfig = {
   google: {
-    families: ['Quicksand:500,600,700&display=swap']
+    api: 'https://fonts.googleapis.com/css2',
+    families: ['Quicksand:wght@500..700:latin&display=swap']
   },
   timeout: 2000
 };
