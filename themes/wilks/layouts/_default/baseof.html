@@ -6,7 +6,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		{{ partial "meta" . }}
 		<link rel="preconnect" href="//fonts.gstatic.com/" crossorigin>
-		<link rel="preconnect" href="//fonts.googleapis.com" crossorigin>
+		<link rel="preconnect" href="//ajax.googleapis.com" crossorigin>
 		<style>{{ readFile "themes/wilks/static/css/main.css" | safeCSS }}</style>
 		{{ with .OutputFormats.Get "RSS" -}}
 			{{ printf `<link rel="%s" type="%s" href="%s" title="%s">` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}
