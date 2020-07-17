@@ -103,6 +103,7 @@
   background-color: var(--color-teaser);
   box-shadow: var(--box-shadow);
   transform: scale(1);
+  padding: 3rem 4rem;
 
   &:hover,
   &:focus {
@@ -111,23 +112,20 @@
 }
 
 .teaser__image {
-  background-color: rgba(0,0,0,.05);
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
-  padding: 4rem 2rem;
+  margin-bottom: 3rem;
 
   img {
     height: 4rem;
     max-width: none;
     width: auto;
     display: block;
-    margin: auto;
   }
 }
 
 .teaser__content {
   text-align: left;
-  padding: 3rem 4rem;
   display: flex;
   flex-direction: column;
   transition: ease-in-out all 0.2s;
