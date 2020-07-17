@@ -666,10 +666,8 @@ main {
   margin-bottom: 3rem;
 }
 
-.teaser__image img {
+.teaser__image svg {
   height: 4rem;
-  max-width: none;
-  width: auto;
   display: block;
 }
 
