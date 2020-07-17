@@ -109,6 +109,10 @@
   &:focus {
     transform: scale(1.025);
   }
+
+  @media #{$breakpoint-small-x} {
+    padding: 2rem;
+  }
 }
 
 .teaser__image {
@@ -128,10 +132,6 @@
   flex-direction: column;
   transition: ease-in-out all 0.2s;
   flex: 1;
-
-  @media #{$breakpoint-small-x} {
-    padding: 2rem;
-  }
 }
 
 .teaser__title {

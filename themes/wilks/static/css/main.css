@@ -660,6 +660,12 @@ main {
           transform: scale(1.025);
 }
 
+@media only screen and (max-width: 40.625em) {
+  .teaser {
+    padding: 2rem;
+  }
+}
+
 .teaser__image {
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
@@ -685,12 +691,6 @@ main {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-}
-
-@media only screen and (max-width: 40.625em) {
-  .teaser__content {
-    padding: 2rem;
-  }
 }
 
 .teaser__title {
