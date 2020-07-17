@@ -1,7 +1,7 @@
 <a href="{{ .Params.website }}" title="Visit {{ .Title }}" class="teaser teaser--work" target="_blank" rel="noopener noreferrer">
   {{ if .Params.logo }}
   <div class="teaser__image" {{ if .Params.color }}style="background-color:{{ .Params.color }};"{{ end }}>
-    <img src="/images/{{ .Params.logo }}" alt="Logo for {{ .Title }}" width="" height="40" loading="lazy">
+    {{ readFile (print "themes/wilks/static/images/" (.Params.logo)) | safeHTML }}
   </div>
   {{ end }}
   <div class="teaser__content">
