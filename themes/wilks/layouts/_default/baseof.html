@@ -7,7 +7,11 @@
 		{{ partial "meta" . }}
 		<link rel="preconnect" href="//fonts.gstatic.com/" crossorigin>
 		<link rel="preconnect" href="//ajax.googleapis.com" crossorigin>
-		<style>{{ readFile "themes/wilks/static/css/main.css" | safeCSS }}</style>
+		{{ if in (.Site.BaseURL | string) "localhost" }}
+			<link rel="stylesheet" href="{{ "css/main.css" | relURL }}">
+		{{ else }}
+			<style>{{ readFile "themes/wilks/static/css/main.css" | safeCSS }}</style>
+		{{ end }}
 		{{ with .OutputFormats.Get "RSS" -}}
 			{{ printf `<link rel="%s" type="%s" href="%s" title="%s">` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}
 		{{- end }}
@@ -19,23 +23,10 @@
 			{{ block "main" . }}{{ end }}
 		</main>
 		{{ partial "footer" . }}
-		<script>
-			WebFontConfig = {
-				google: {
-					api: 'https://fonts.googleapis.com/css2',
-					families: ['Quicksand:wght@500..700:latin&display=swap']
-				},
-				timeout: 2000
-			};
-			(function () {
-				var wf = document.createElement('script');
-				wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
-				wf.type = 'text/javascript';
-				wf.async = 'true';
-				var s = document.getElementsByTagName('script')[0];
-				s.parentNode.insertBefore(wf, s);
-			})();
-		</script>
-		<script src="{{ "scripts/main.js" | relURL }}"></script>
+		{{ if in (.Site.BaseURL | string) "localhost" }}
+			<script src="{{ "scripts/main.js" | relURL }}"></script>
+		{{ else }}
+			<script>{{ readFile "themes/wilks/static/scripts/main.js" | safeJS }}</script>
+		{{ end }}
 	</body>
 </html>
