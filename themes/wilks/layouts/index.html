@@ -11,7 +11,7 @@
 {{ with .Site.GetPage "section" "work" }}
 <section class="section section--work section--latest animate">
   <h2 class="section__heading">Latest Work <a href="/work" class="section__button" title="View all work">View all</a></h2>
-  <ol class="post-list">
+  <ol class="post-list post-list--flick">
     {{ range ( first 6 ( where .Site.RegularPages "Section" "work" ) ) }}
     <li class="post-list__item">{{ .Render "summary" }}</li>
     {{ end }}
@@ -21,7 +21,7 @@
 
 <section class="section section--articles section--latest animate">
   <h2 class="section__heading">Latest Articles <a href="/articles" class="section__button" title="View all articles">View all</a></h2>
-  <ol class="post-list">
+  <ol class="post-list post-list--flick">
     {{ range ( first 3 ( where .Site.RegularPages "Section" "articles" ) ) }}
     <li class="post-list__item">{{ .Render "summary" }}</li>
     {{ end }}

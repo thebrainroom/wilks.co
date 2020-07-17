@@ -29,6 +29,48 @@
   }
 }
 
+.post-list--flick {
+  &::-webkit-scrollbar {
+    width: 0.5rem;
+    height: 0.5rem;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #000;
+    border-radius: 0.5rem;
+  }
+  
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  @media #{$breakpoint-small-x} {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin: 0 -4rem 0 -1rem;
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .post-list__item {
+    scroll-snap-align: start;
+
+    @media #{$breakpoint-small-x} {
+      flex: 1 0 calc(100vw - 8rem);
+
+      &:last-child {
+        margin-right: 4rem;
+        padding-right: 4rem;
+        box-sizing: content-box;
+        flex: 1 0 calc(70vw);
+      }
+    }
+  }
+}
+
 .section {
   padding: 10rem 10rem 10rem var(--frame-gap);
   background-color: var(--theme-default);
