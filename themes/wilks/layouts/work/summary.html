@@ -1,7 +1,9 @@
 <a href="{{ .Params.website }}" title="Visit {{ .Title }}" class="teaser teaser--work" target="_blank" rel="noopener noreferrer">
+  {{ if .Params.logo }}
   <div class="teaser__image" {{ if .Params.color }}style="background-color:{{ .Params.color }};"{{ end }}>
     <img src="/images/{{ .Params.logo }}" alt="Logo for {{ .Title }}" width="" height="40" loading="lazy">
   </div>
+  {{ end }}
   <div class="teaser__content">
     <h2 class="teaser__title">{{ .Title }}</h2>
     <div class="teaser__footer">
