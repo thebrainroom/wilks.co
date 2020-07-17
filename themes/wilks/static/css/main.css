@@ -71,7 +71,7 @@
   --color-primary: #d8033f;
   --theme-default: hsla(52, 100%, 71%, 1);
   --theme-article: hsla(107, 86%, 86%, 1);
-  --theme-work: hsla(271, 52%, 74%, 0.75);
+  --theme-work: hsl(287, 91%, 91%);
   --box-shadow: 0 0.1rem 0.2rem rgba(0,0,0,0.02), 0 0.2rem 0.4rem rgba(0,0,0,0.02), 0 0.4rem 0.8rem rgba(0,0,0,0.02), 0 8px 1.6rem rgba(0,0,0,0.02), 0 1.6rem 3.2rem rgba(0,0,0,0.02), 0 3.2rem 6.4rem rgba(0,0,0,0.02);
   --frame-gap: 35rem;
   --frame: 7.5rem;
@@ -174,7 +174,7 @@ h1 {
 
 h2 {
   font-size: var(--font-size-h2);
-  font-weight: 700;
+  font-weight: 600;
 }
 
 h3 {
