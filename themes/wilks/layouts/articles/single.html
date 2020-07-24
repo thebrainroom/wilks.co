@@ -24,7 +24,10 @@
       "@id": "{{ .Permalink }}"
     },
     "headline": "{{ .Title }}",
-    "image": "{{ .Site.BaseURL }}/images/favicon.svg",
+    "image": {
+      "@type": "ImageObject",
+      "url": "{{ .Site.BaseURL }}/images/favicon.svg"
+    },
     "author": {
       "@type": "Person",
       "name": "Tom Wilks"
