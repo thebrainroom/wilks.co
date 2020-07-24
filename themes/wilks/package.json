@@ -20,9 +20,9 @@
   },
   "homepage": "https://github.com/thisisbliss/bliss-go",
   "devDependencies": {
-    "@babel/core": "^7.7.5",
-    "@babel/preset-env": "^7.7.6",
-    "autoprefixer": "^9.7.6",
+    "@babel/core": "^7.10.5",
+    "@babel/preset-env": "^7.10.4",
+    "autoprefixer": "^9.8.5",
     "babel-core": "^6.26.3",
     "babel-loader": "^8.0.6",
     "babel-preset-env": "^1.7.0",
@@ -36,7 +36,7 @@
     "gulp-sass-lint": "^1.4.0",
     "gulp-semistandard": "^1.0.0",
     "gulp-sourcemaps": "^2.6.5",
-    "gulp-terser": "^1.2.0",
+    "gulp-terser": "^1.2.1",
     "sass-lint": "^1.13.1"
   },
   "browserslist": [
