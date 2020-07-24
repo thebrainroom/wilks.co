@@ -18,18 +18,3 @@ HUGO_VERSION = "0.74.3"
 
 [context.next.environment]
 HUGO_ENABLEGITINFO = "true"
-
-[[redirects]]
-  from = "/about"
-  to = "/about/"
-  status = 301
-
-[[redirects]]
-  from = "/work"
-  to = "/work/"
-  status = 301
-
-[[redirects]]
-  from = "/articles"
-  to = "/articles/"
-  status = 301
