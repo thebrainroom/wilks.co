@@ -2,7 +2,6 @@
 title: "About"
 description: "Web Developer from Manchester focusing on Front-end and Drupal development. Developing websites and web applications commercially since 2010 and dabbling in all things web since 2005."
 draft: false
-slug: about
 type: default
 layout: page-single
 intro: 
