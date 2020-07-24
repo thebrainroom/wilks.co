@@ -43,5 +43,25 @@
 		{{ else }}
 			<script>{{ readFile "themes/wilks/static/scripts/main.js" | safeJS }}</script>
 		{{ end }}
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org/",
+				"@type": "Person",
+				"name": "Tom Wilks",
+				"url": "https://wilks.co/about",
+				"image": "",
+				"sameAs": [
+					"https://twitter.com/wilksdotco",
+					"https://github.com/thebrainroom",
+					"https://wilks.co",
+					"https://linkedin.com/in/tom-wilks"
+				],
+				"jobTitle": "Front-end Developer",
+				"worksFor": {
+					"@type": "Organization",
+					"name": "Bliss"
+				}  
+			}
+		</script>
 	</body>
 </html>

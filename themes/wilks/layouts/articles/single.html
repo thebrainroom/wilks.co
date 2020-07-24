@@ -15,4 +15,29 @@
   </div>
 </article>
 {{ partial "other-articles.html" . }}
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "{{ .Permalink }}"
+    },
+    "headline": "{{ .Title }}",
+    "image": "{{ .Site.BaseURL }}images/favicon.svg",
+    "author": {
+      "@type": "Person",
+      "name": "Tom Wilks"
+    },  
+    "publisher": {
+      "@type": "Organization",
+      "name": "Tom Wilks",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "{{ .Site.BaseURL }}images/favicon.svg"
+      }
+    },
+    "datePublished": "{{ .Date }}"
+  }
+</script>
 {{ end }}
