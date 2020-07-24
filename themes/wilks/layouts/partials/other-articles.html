@@ -1,5 +1,5 @@
 <section class="section section--articles section--latest animate fadein">
-	<h2 class="section__heading">Other Articles <a href="/articles" class="section__button">View all</a></h2>
+	<h2 class="section__heading">Other Articles <a href="/articles/" class="section__button">View all</a></h2>
 	<ol class="post-list">
 		{{ range ( first 3 ( where .Site.RegularPages "Section" "articles" ) ) }}
 		<li class="post-list__item">{{ .Render "summary" }}</li>
