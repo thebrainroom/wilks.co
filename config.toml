@@ -5,6 +5,7 @@ theme = "wilks"
 [params]
   Title = "Tom Wilks - Front-end Web Developer from Manchester"
   Description = "Tom Wilks is a Manchester based front-end web developer specialising in Drupal and modern web technologies."
+  font = "https://fonts.googleapis.com/css2?family=Quicksand:wght@500..700:latin&display=swap"
   theme = ""
 [menu]
 [markup]

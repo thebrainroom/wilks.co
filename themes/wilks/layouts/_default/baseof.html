@@ -5,8 +5,23 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		{{ partial "meta" . }}
-		<link rel="preconnect" href="//fonts.gstatic.com/" crossorigin>
-		<link rel="preconnect" href="//ajax.googleapis.com" crossorigin>
+		<link rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin />
+
+		<link rel="preload"
+      as="style"
+      href="{{ .Site.Params.font }}" />
+
+		<link rel="stylesheet"
+      href="{{ .Site.Params.font }}"
+      media="print" onload="this.media='all'" />
+
+		<noscript>
+			<link rel="stylesheet"
+						href="{{ .Site.Params.font }}" />
+		</noscript>
+
 		{{ if in (.Site.BaseURL | string) "localhost" }}
 			<link rel="stylesheet" href="{{ "css/main.css" | relURL }}">
 		{{ else }}
